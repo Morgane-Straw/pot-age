@@ -12,14 +12,14 @@ Dans ce dossier vous devez :
   npx create-next-app frontend --use-npm
 )
 - Suppression des fichiers génant 
-sudo rm frontend/style/*
-sudo rm frontend/public/*
-sudo rm frontend/pages/*
-sudo rm frontend/package-lock.json
-sudo rm frontend/next.config.js
-sudo rm frontend/README.md
-sudo rm frontend/.gitignore
-sudo rm frontend/.eslintrc.json
+sudo rm frontend/style/*;
+sudo rm frontend/public/*;
+sudo rm frontend/pages/*;
+sudo rm frontend/package-lock.json;
+sudo rm frontend/next.config.js;
+sudo rm frontend/README.md;
+sudo rm frontend/.gitignore;
+sudo rm frontend/.eslintrc.json;
 
 # Relier a git
 - mettez vous dans votre dossier pot-age

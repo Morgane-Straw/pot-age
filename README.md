@@ -11,15 +11,6 @@ Dans ce dossier vous devez :
 (vous tapez la commande : 
   npx create-next-app frontend --use-npm
 )
-- Construire votre projet, ca peut prendre du temps (5min max) :
-(vous tapez la commande :
-  sudo docker-compose build
-)
-- Testez votre projet :
-(vous tapez la commande :
-  sudo docker-compose up
-)
-Vous pouvez voir le résultat à http://localhost:3000
 
 # Relier a git
 - mettez vous dans votre dossier pot-age
@@ -34,7 +25,17 @@ Vous pouvez voir le résultat à http://localhost:3000
 Vous voila désormais avec le dépot qui contient votre configuration
 
 # Pour lancer le serveur
-sudo docker-compose up
+
+- Construire votre projet, ca peut prendre du temps (5min max) :
+(vous tapez la commande :
+  sudo docker-compose build
+)
+- Testez votre projet :
+(vous tapez la commande :
+  sudo docker-compose up
+)
+Vous pouvez voir le résultat à http://localhost:3000
+
 
 # En cas de problème de mise à jour du site
 Essayer sudo docker-compose build

@@ -12,10 +12,18 @@ Dans ce dossier vous devez :
   npx create-next-app frontend --use-npm
 )
 - Suppression des fichiers génant 
-sudo rm frontend/style/*;
-sudo rm frontend/public/*;
+sudo rm frontend/style/global.css;
+sudo rm frontend/style/Home.module.css;
+
+sudo rm frontend/public/vercel.svg;
+sudo rm frontend/public/favicon.ico;
+
 sudo rm frontend/pages/*;
+sudo rm frontend/pages/api/hello.js;
+
+sudo rm frontend/package.json;
 sudo rm frontend/package-lock.json;
+
 sudo rm frontend/next.config.js;
 sudo rm frontend/README.md;
 sudo rm frontend/.gitignore;

@@ -32,7 +32,7 @@ sudo docker-compose up
 
 
 
-# !!!! Ancien Readme !!!! #
+# !!!!! Ancien Readme !!!!! #
 # pot-age
 Faut avoir installé Node : https://nodejs.org/ 
 

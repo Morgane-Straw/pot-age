@@ -5,11 +5,15 @@ Pour votre premier pull, vous devez :
 Dans ce dossier vous devez :
 - Installer laravel pour créer le backend : 
 (vous tapez la commande : 
+  
   composer create-project --prefer-dist laravel/laravel backend
+
 )
 - Installer next pour créer le frontend : 
 (vous tapez la commande : 
+  
   npx create-next-app frontend --use-npm
+
 )
 - Suppression des fichiers génant 
 

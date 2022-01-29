@@ -1,4 +1,4 @@
-git clone https://github.com/Morgane-Straw/pot-age.git ou git pull
+
 
 # Vous devez être positionner dans le repertoire pot-age
 
@@ -9,6 +9,8 @@ composer create-project --prefer-dist laravel/laravel backend
 npx create-next-app frontend --use-npm
 
 # Modif des env
+
+git clone https://github.com/Morgane-Straw/pot-age.git ou git pull
 
 # Construction du site
 sudo docker-compose build

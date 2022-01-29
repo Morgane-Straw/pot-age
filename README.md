@@ -43,6 +43,9 @@ sudo rm frontend/README.md;
 
 sudo rm frontend/.gitignore;
 
+sudo rm frontend/.git;
+
+
 sudo rm frontend/.eslintrc.json;
 
 # Relier a git

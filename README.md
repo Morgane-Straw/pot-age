@@ -17,7 +17,7 @@ Dans ce dossier vous devez :
 )
 - Suppression des fichiers génant 
 
-sudo rm frontend/style/global.css frontend/style/Home.module.css frontend/public/vercel.svg frontend/public/favicon.ico frontend/pages/* frontend/pages/api/hello.js frontend/package.json frontend/package-lock.json frontend/next.config.js frontend/README.md frontend/.gitignore frontend/.git frontend/.eslintrc.json
+sudo rm frontend/styles/global.css frontend/styles/Home.module.css frontend/public/vercel.svg frontend/public/favicon.ico frontend/pages/* frontend/pages/api/hello.js frontend/package.json frontend/package-lock.json frontend/next.config.js frontend/README.md frontend/.gitignore frontend/.git frontend/.eslintrc.json
 
 # Relier a git
 - mettez vous dans votre dossier pot-age

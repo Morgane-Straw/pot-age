@@ -12,21 +12,33 @@ Dans ce dossier vous devez :
   npx create-next-app frontend --use-npm
 )
 - Suppression des fichiers génant 
+
 sudo rm frontend/style/global.css;
+
 sudo rm frontend/style/Home.module.css;
 
+
 sudo rm frontend/public/vercel.svg;
+
 sudo rm frontend/public/favicon.ico;
 
+
 sudo rm frontend/pages/*;
+
 sudo rm frontend/pages/api/hello.js;
 
+
 sudo rm frontend/package.json;
+
 sudo rm frontend/package-lock.json;
 
+
 sudo rm frontend/next.config.js;
+
 sudo rm frontend/README.md;
+
 sudo rm frontend/.gitignore;
+
 sudo rm frontend/.eslintrc.json;
 
 # Relier a git
@@ -36,9 +48,10 @@ sudo rm frontend/.eslintrc.json;
 -   git add .
 -   git commit -am "my first commit *pseudo"
 -   git remote add origin https://github.com/Morgane-Straw/pot-age.git
--   (si on vous demande de taper un message, taper juste "debut de mon git *pseudo" et fermer la fenêtre en validant)
 -   git pull origin master --allow-unrelated-histories
+-   (si on vous demande de taper un message, taper juste "debut de mon git *pseudo" et fermer la fenêtre en validant)
 -   git push --set-upstream origin master
+-   
 Vous voila désormais avec le dépot qui contient votre configuration
 
 # Pour lancer le serveur

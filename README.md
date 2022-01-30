@@ -22,6 +22,8 @@ npm install
 
 
 # Créer le projet
+Revenez en arrière
+cd ..
 
 - Construire votre projet, ca peut prendre du temps (5min max) :
 

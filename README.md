@@ -1,8 +1,33 @@
 # Initialisation du projet
-Pour votre premier pull, vous devez :
-- créer un dossier "pot-age"
+Cloner le projet
+git clone https://github.com/Morgane-Straw/pot-age.git
+cd pot-age
 
-Dans ce dossier vous devez :
+# Initialiser Laravel
+cd backend
+composer install
+
+# Initialiser nextjs
+cd ../frontend/
+npm install
+
+# Créer le projet
+- Construire votre projet, ca peut prendre du temps (5min max) :
+(vous tapez la commande :
+  sudo docker-compose build
+)
+- Testez votre projet :
+(vous tapez la commande :
+  sudo docker-compose up
+)
+Vous pouvez voir le résultat à http://localhost:3000
+
+
+
+
+
+# Commande utile
+
 - Installer laravel pour créer le backend : 
 (vous tapez la commande : 
   
@@ -13,24 +38,6 @@ Dans ce dossier vous devez :
 (vous tapez la commande : 
   
   npx create-next-app frontend --use-npm
-
-)
-- Suppression des fichiers génant 
-
-sudo rm frontend/styles/globals.css frontend/styles/Home.module.css frontend/public/vercel.svg frontend/public/favicon.ico frontend/pages/* frontend/pages/api/hello.js frontend/package.json frontend/package-lock.json frontend/next.config.js frontend/README.md frontend/.gitignore frontend/.git frontend/.eslintrc.json
-
-# Relier a git
-- mettez vous dans votre dossier pot-age
-- tapez :
--   git init
--   git add .
--   git commit -am "my first commit *pseudo"
--   git remote add origin https://github.com/Morgane-Straw/pot-age.git
--   git pull origin master --allow-unrelated-histories
--   (si on vous demande de taper un message, taper juste "debut de mon git *pseudo" et fermer la fenêtre en validant)
--   git push --set-upstream origin master
--   
-Vous voila désormais avec le dépot qui contient votre configuration
 
 # Pour lancer le serveur
 

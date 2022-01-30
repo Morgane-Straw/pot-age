@@ -35,6 +35,7 @@ services:
 
  db:
   image: mysql:8.0.27
+  platform: linux/amd64
   environment:
    MYSQL_DATABASE: 'laravel'
    MYSQL_USER: 'root'

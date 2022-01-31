@@ -18,8 +18,17 @@ composer install
 
 cd ../frontend/
 
-npm install
+yarn
 
+(et si yarn marche pas npm install --global yarn
+
+
+ et après 
+ 
+ yarn
+ 
+ 
+ )
 
 # Créer le projet
 Revenez en arrière

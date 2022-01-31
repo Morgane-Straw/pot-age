@@ -38,11 +38,6 @@ export default function Login() {
       <div className="container">
       <div className="row justify-content-center">
         <div className="col-xl-4 col-md-5 col-sm-8 col-10 text-center">
-          <img
-          src="./LogoBlanc.svg"
-          alt="Cook, Eat and Connect logo avec un coeur"
-          height="auto"
-          width="256 px" />
           <h1 className="h1 color-primary"> <strong>  Bienvenue </strong> </h1>
           <form method="post" action="">
               <label for="Email"></label>

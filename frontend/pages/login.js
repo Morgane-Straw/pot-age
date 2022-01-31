@@ -1,11 +1,13 @@
-export default function Login() {
+// export default function Login() {
   import React from 'react';
   import './App.css';
   
   import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
   import { faEye } from "@fortawesome/free-solid-svg-icons";
   const eye = <FontAwesomeIcon icon={faEye} />;
-  export default class App extends React.Component {
+
+  export default class Login extends React.Component {
+
     constructor(props) {
       super(props);
       this.state = {
@@ -77,5 +79,5 @@ export default function Login() {
     </body>
   </html></div>
   );}}
-  }
+  // }
   

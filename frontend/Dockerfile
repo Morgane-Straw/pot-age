@@ -1,6 +1,8 @@
-FROM node:12
-
+FROM ubuntu:18.04
 ENV PORT 3000
+
+# Install Node.js
+RUN apt-get install -y build-essential
 
 # Create app directory
 RUN mkdir -p /app/frontend

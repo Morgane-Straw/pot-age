@@ -1,6 +1,5 @@
 export default function Login() {
   import React from 'react';
-  import './App.css';
   
   import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
   import { faEye } from "@fortawesome/free-solid-svg-icons";

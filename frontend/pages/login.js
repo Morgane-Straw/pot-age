@@ -37,8 +37,10 @@
   
     <body className="bg-body">
       <div className="container">
-      <div className="row justify-content-center">
-        <div className="col-xl-4 col-md-5 col-sm-8 col-10 text-center">
+      <div className="col">
+        <img src="image.png"> 
+      </div>
+      <div className="col">
           <h1 className="h1 color-primary"> <strong>  Bienvenue </strong> </h1>
           <form method="post" action="">
               <label for="Email"></label>
@@ -67,13 +69,11 @@
             <br />
           <h6 className="color-primary"> <strong>     OU   </strong>    </h6>
           <br />
-          <br />
             <div className="button">
               <a className="btn btn-primary btn-lg" href="./Inscription">Pas encore de compte ? </a>
             </div>
         </form>
       </div>
-    </div>
     </div>
     </body>
   </html></div>

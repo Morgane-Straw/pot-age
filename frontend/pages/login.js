@@ -1,10 +1,7 @@
 // export default function Login() {
   import React from 'react';
   
-  import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-  import { faEye } from "@fortawesome/free-solid-svg-icons";
-  const eye = <FontAwesomeIcon icon={faEye} />;
-
+  
   export default class Login extends React.Component {
 
     constructor(props) {
@@ -32,14 +29,16 @@
     <head>
       <meta charset="utf-8" />
       <title>Pot-Age</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></link>
     </head>
   
     <body className="bg-body">
       <div className="container">
-      <div className="col">
-        <img src="image.png"> 
-      </div>
-      <div className="col">
+      <div className="row justify-content-center">
+        <div className="col">
+            <img src = "../scr/img/Profile Interface-cuate(2).svg"/>
+        </div>
+        <div className="col-xl-4 col-md-5 col-sm-8 col-10 text-center">
           <h1 className="h1 color-primary"> <strong>  Bienvenue </strong> </h1>
           <form method="post" action="">
               <label for="Email"></label>
@@ -49,7 +48,7 @@
                 <input className="form-control" type={this.state.hidden ? 'password' : 'text'} value={this.state.password}
             onChange={this.handlePasswordChange} name="pass" placeholder="Mot de passe" id="pass" />
                 <div className="input-group-text">
-                  <i onClick={this.toggleShow}>{eye}</i>
+                  <i onClick={this.toggleShow} className="fas fa-eye"></i>
                 </div>
               </div>
   
@@ -73,6 +72,7 @@
             </div>
         </form>
       </div>
+    </div>
     </div>
     </body>
   </html></div>

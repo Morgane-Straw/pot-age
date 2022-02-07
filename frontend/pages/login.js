@@ -68,7 +68,7 @@
           <br />
           <br />
             <div className="button">
-              <a className="btn btn-primary btn-lg" href="./Inscription">S'incrire </a>
+              <a className="btn btn-primary btn-lg" href="./Inscription">Pas encore de compte ? </a>
             </div>
         </form>
       </div>

@@ -5,7 +5,7 @@ export default function NavbarButton(props) {
     return (
         <Link href={props.href}>
             <a >
-                {props.src ? <img src={props.src} /> : "s"}
+                {props.icon ? <i className={"fas "+props.icon}></i> : "s"}
                 
                 <span>{props.title}</span>
             </a>

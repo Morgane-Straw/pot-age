@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function Navbar() {
     return (
-    <nav className="d-flex flex-row">
-      <img src='/LogoBleu.svg' alt="Pot'Age"></img>
+    <nav className="d-flex flex-row align-items-end">
+      <img src='img/LogoBleu.svg' alt="Pot'Age"></img>
       <Link href="/proposer-evenement">
         <button className="btn-primary d-flex  flex-row justify-content-center align-items-center text-center">
         <i className="far fa-plus-square "></i>

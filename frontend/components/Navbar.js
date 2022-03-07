@@ -7,7 +7,7 @@ export default function Navbar() {
     return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light nav nav-pills nav-fill">
       <a className="navbar-brand nav-item" href="#">
-          <Image src="/img/LogoBleu.svg" alt="Pot'Age" height="32" layout="fill"/>
+          <Image src="/img/LogoBleu.svg" alt="Pot'Age" height="32" layout="fill "/>
      </a>
       <Link href="/proposer-evenement" passHref>
         <button className="nav-item btn-primary">
@@ -22,7 +22,7 @@ export default function Navbar() {
       <NavbarButton title="Messages" href="/en-chantier" icon="fas fa-envelope"></NavbarButton>
       <Link href='/mon-compte'>
             <a className='nav-item'>
-               // <Image src="/Todo" alt="TODO" layout="fill"/>
+               {/*<Image src="/Todo" alt="TODO" layout="fill"/> */}
 
                 <span>Mon compte</span>
             </a>

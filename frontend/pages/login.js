@@ -18,8 +18,6 @@
     toggleShow() {
       this.setState({ hidden: !this.state.hidden });
     }
-
-  
     render (){   
       
   return (
@@ -35,7 +33,7 @@
       <div className="container">
       <div className="row justify-content-center">
         <div className="col">
-            <img src = "../scr/img/Profile Interface-cuate(2).svg"/>
+            <img src = "/Profile Interface-cuate(2).svg"/>
         </div>
         <div className="col-xl-4 col-md-5 col-sm-8 col-10 text-center">
           <h1 className="h1 color-primary"> <strong>  Bienvenue </strong> </h1>

@@ -33,46 +33,56 @@
   
     <body className="bg-body">
       <div className="container">
-      <div className="row justify-content-center">
-        <div className="col">
-            <img src = "../scr/img/Profile Interface-cuate(2).svg"/>
-        </div>
-        <div className="col-xl-4 col-md-5 col-sm-8 col-10 text-center">
-          <h1 className="h1 color-primary"> <strong>  Bienvenue </strong> </h1>
-          <form method="post" action="">
-              <label for="Email"></label>
-              <input className="form-control" type="text" name="Email" placeholder="Email" id="Email" />
-              <label htmlFor="pass"></label>
-              <div className="input-group">
-                <input className="form-control" type={this.state.hidden ? 'password' : 'text'} value={this.state.password}
-            onChange={this.handlePasswordChange} name="pass" placeholder="Mot de passe" id="pass" />
-                <div className="input-group-text">
-                  <i onClick={this.toggleShow} className="fas fa-eye"></i>
+        <div className="row justify-content-center">
+          <div className="col">
+              <img src = "/img/Profile Interface-cuate(2).svg"/>
+          </div>
+          <div className="col-xl-4 col-md-5 col-sm-8 col-10">
+            <div className="shadow p-5 mt-5">
+              <h1 className="text-primary h1"><strong>Bienvenue !</strong></h1>
+              <p>Entrez votre email et votre mot de passe pour accéder à votre compte</p>
+              <form method="post" action="">
+
+                <label for="Email">Email</label>
+                <input className="form-control" type="text" name="Email" placeholder="Email" id="Email" />
+
+                <label htmlFor="pass">Mot de passe</label>
+                <div className="input-group">
+                  <input className="form-control" type={this.state.hidden ? 'password' : 'text'} value={this.state.password} 
+                  onChange={this.handlePasswordChange} name="pass" placeholder="Mot de passe" id="pass" />
+                  <div className="input-group-text">
+                    <i onClick={this.toggleShow} className="fas fa-eye"></i>
+                  </div>
                 </div>
-              </div>
-  
-              <div class="form-check text-left ">
-        <input type="checkbox" class="form-check-input" id="dropdownCheck"/>
-        <label class="form-check-label" for="dropdownCheck">
-          Se souvenir de moi
-        </label>
-       </div>
-              <div className="text-left mb-4">
-                <a className="btn btn-link text-left color-primary" href="/mdpoublie">Mot de passe oublié ?</a>
-              </div>
-              <div className="button">
-              <button className="btn btn-primary btn-lg " type="submit">Connexion</button>
+
+                <div className="row">
+                  <div className="col-auto form-check text-left px-3 py-2">
+                    <input type="checkbox" className="form-check-input" id="dropdownCheck"/>
+                    <label className="form-check-label" for="dropdownCheck">Se souvenir de moi</label>
+                  </div>
+
+                  <div className="col-auto text-right">
+                    <a className="btn btn-link text-left color-primary px-3 py-2" href="/mdpoublie">Mot de passe oublié ?</a>
+                  </div>
+                </div>
+
+                <div className="button text-right text-center">
+                  <button className="btn btn-primary btn-lg col-8" type="submit">Connexion</button>
+                </div>
+
+                <br/>
+                <h6 className="color-primary text-center"><strong>OU</strong></h6>
+                <br/>
+
+                <div className="button text-center">
+                  <a className="btn btn-primary btn-lg col-8" href="./Inscription">Pas encore de compte ? </a>
+                </div>
+
+              </form>
             </div>
-            <br />
-          <h6 className="color-primary"> <strong>     OU   </strong>    </h6>
-          <br />
-            <div className="button">
-              <a className="btn btn-primary btn-lg" href="./Inscription">Pas encore de compte ? </a>
-            </div>
-        </form>
+          </div>
+        </div>
       </div>
-    </div>
-    </div>
     </body>
   </html></div>
   );}}

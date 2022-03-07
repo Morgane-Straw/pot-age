@@ -72,9 +72,7 @@ return (
              <button className="btn btn-primary btn-lg col-8" type="submit">Connexion</button>
            </div>
 
-           <br/>
            <h6 className="text-center"><strong>OU</strong></h6>
-           <br/>
 
            <div className="button text-center">
              <a className="btn btn-outline-primary btn-lg col-8" href="./Inscription">Pas encore de compte&nbsp;? </a>

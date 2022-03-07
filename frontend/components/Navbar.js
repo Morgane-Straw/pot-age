@@ -7,7 +7,7 @@ export default function Navbar() {
     return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light nav nav-pills nav-fill">
       <a className="navbar-brand nav-item" href="#">
-          <Image src="/img/LogoBleu.svg" alt="Pot'Age" height="32" layout="fill "/>
+          <Image src="/img/LogoBleu.svg" alt="Pot'Age" height="32" width="256"/>
      </a>
       <Link href="/proposer-evenement" passHref>
         <button className="nav-item btn-primary">

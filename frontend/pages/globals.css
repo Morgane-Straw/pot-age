@@ -14,3 +14,28 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.text-primary{
+  color: #0F5E79 !important;
+}
+
+.btn-primary{
+  background-color: #0F5E79 !important;
+  border-color: #0F5E79 !important;
+}
+
+.btn-outline-primary{
+  color: #0F5E79 !important;
+  border-color: #0F5E79 !important;
+}
+
+.btn-primary:hover{
+  background-color: #0e3f50 !important;
+  border-color: #0e3f50 !important;
+}
+
+.btn-outline-primary:hover{
+  background-color: #0F5E79 !important;
+  color: #ffffff !important;
+  border-color: #0F5E79 !important;
+}

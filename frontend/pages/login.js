@@ -62,6 +62,12 @@ return (
                <input type="checkbox" className="form-check-input" id="dropdownCheck"/>
                <label className="form-check-label" htmlFor="dropdownCheck">Se souvenir de moi</label>
              </div>
+             <div class="form-check col-auto">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+            <label class="form-check-label" for="flexCheckDefault">
+              Se souvenir de moi
+            </label>
+            </div>
 
              <div className="col-auto text-right">
                <a className="btn btn-link text-left text-primary px-3 py-2" href="/mdpoublie">Mot de passe oublié&nbsp;?</a>

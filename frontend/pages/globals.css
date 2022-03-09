@@ -39,3 +39,8 @@ a {
   color: #ffffff !important;
   border-color: #0F5E79 !important;
 }
+
+#section1{
+  background-image: url('/img/pexels-andrea-piacquadio-3768140.jpg');
+  background-size: 100%;
+}

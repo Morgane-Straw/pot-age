@@ -43,4 +43,9 @@ a {
 #section1{
   background-image: url('/img/pexels-andrea-piacquadio-3768140.jpg');
   background-size: 100%;
+  background-position: 0 -300px;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: 600 !important;
 }

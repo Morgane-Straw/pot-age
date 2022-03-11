@@ -54,18 +54,18 @@
         <div className='container'>
           <div className='row gx-5 mt-5'>
             <div className='col-md-4'>
-              <Image src='/img/vitrine1-carre.jpg' className='img-fluid mb-3' alt="Todo"></Image>
+              <Image src='/img/vitrine1-carre.jpg' className='img-fluid mb-3' alt="Todo" layout="fill"></Image>
             </div>
             <div className='col-md-8'>
               <h2 className='h2 text-primary'>Senior ?</h2>
               <p>Vous souhaitez vous engager au sein de votre quartier ? Vous souhaitez transmettre votre savoir faire aux plus jeunes ? Pot’Âgé vous permet de proposer vos évènements auprès des plus jeunes dans votre quartier !</p>
               <h3 className='h4 text-primary'>Comment ça marche ?</h3>
-              <Image src='/img/Groupe 311.svg' className='img-fluid' alt="Todo"></Image>
+              <Image src='/img/Groupe 311.svg' className='img-fluid' alt="Todo" layout="fill"></Image>
             </div>
           </div>
           <div className='row gx-5 mt-5'>
             <div className='col-md-4 order-md-1'>
-                <Image src='/img/vitrine2-carre.jpg' className='img-fluid mb-3' alt="Todo"></Image>
+                <Image src='/img/vitrine2-carre.jpg' className='img-fluid mb-3' alt="Todo" layout="fill"></Image>
             </div>
             <div className='col-md-8 order-md-0'>
               <h2 className='h2 text-primary'>Famille ?</h2>

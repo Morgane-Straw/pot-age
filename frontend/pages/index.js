@@ -71,18 +71,18 @@
               <h2 className='h2 text-primary'>Famille ?</h2>
               <p>{txt_question_1}</p>
               <h3 className='h4 text-primary'>{txt_question_2}</h3>
-              <Image src='/img/Groupe 312.svg' className='img-fluid' alt="Todo"></Image>
+              <Image src='/img/Groupe 312.svg' className='img-fluid' alt="Todo" layout="fill"></Image>
             </div>
           </div>
           <div className='row gx-5 mt-5'>
             <div className='col-md-4'>
-              <Image src='/img/vitrine3-carre.jpg' className='img-fluid mb-3' alt="Todo"></Image>
+              <Image src='/img/vitrine3-carre.jpg' className='img-fluid mb-3' alt="Todo" layout="fill"></Image>
             </div>
             <div className='col-md-8'>
               <h2 className='h2 text-primary'>Etablissement ?</h2>
               <p>{txt_question_3}</p>
               <h3 className='h4 text-primary'>Comment ça marche ?</h3>
-              <Image src='/img/Groupe 313.svg' className='img-fluid' alt="Todo"></Image>
+              <Image src='/img/Groupe 313.svg' className='img-fluid' alt="Todo" layout="fill"></Image>
             </div>
           </div>
         </div>

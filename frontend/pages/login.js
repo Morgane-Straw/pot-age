@@ -37,7 +37,7 @@ return (
  <div className="container">
    <div className="row justify-content-center">
      <div className="d-none d-lg-block col-xl-6 col-lg-7">
-        <img src="/img/Profile Interface-cuate(2).svg" alt="descriptionTodo" layout="fill"/>
+        <Image src="/img/Profile Interface-cuate(2).svg" alt="descriptionTodo" layout="fill"/>
      </div>
      <div className="col-lg-5 col-xl-6 col">
        <div className="shadow rounded p-5 mt-5">
@@ -45,7 +45,7 @@ return (
          <p>Entrez votre email et votre mot de passe pour accéder à votre compte.</p>
          <form method="post" action="">
 
-           <i class="fa fa-mail"></i><label htmlFor="Email">Email</label>
+           <i className="fa fa-mail"></i><label htmlFor="Email">Email</label>
            <input className="form-control" type="text" name="Email" placeholder="Email" id="Email" />
 
            <label htmlFor="pass">Mot de passe</label>
@@ -62,9 +62,9 @@ return (
                <input type="checkbox" className="form-check-input" id="dropdownCheck"/>
                <label className="form-check-label" htmlFor="dropdownCheck">Se souvenir de moi</label>
              </div>
-             <div class="form-check col-auto">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-            <label class="form-check-label" for="flexCheckDefault">
+             <div className="form-check col-auto">
+              <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+            <label className="form-check-label" htmlFor="flexCheckDefault">
               Se souvenir de moi
             </label>
             </div>

@@ -49,3 +49,31 @@ a {
 h1, h2, h3, h4, h5, h6{
   font-weight: 600 !important;
 }
+.w-30px{
+  width: 30px !important;
+}
+.h-30px{
+  height: 30px !important;
+}
+.w-logo{
+  width: 200px;
+}
+.h-button-event{
+  height:35px;
+}
+.spacing-plus-button-event{
+  margin-right:0.5rem;
+}
+.z-index-top{
+  z-index: 30;
+}
+.w-20px{
+  width : 20px;
+}
+.nav-item,  .active {
+  border-bottom: 0.2rem ;
+}
+.nav-button:not(.active .nav-button):hover,  .active {
+  border-bottom: solid #0F5E79;
+}
+/* .active .nav-button:hover */

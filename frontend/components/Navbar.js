@@ -1,32 +1,66 @@
 import NavbarButton from "./NavbarButton";
 import Link from "next/link";
-import Image from "next/image"
-
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { useRouter } from 'next/router';
 
 export default function Navbar() {
-    return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light nav nav-pills nav-fill">
-      <a className="navbar-brand nav-item" href="#">
-          <Image src="/img/LogoBleu.svg" alt="Pot'Age" height="32" width="256"/>
-     </a>
-      <Link href="/proposer-evenement" passHref>
-        <button className="nav-item btn-primary">
-        <i className="far fa-plus-square "></i>
-        <span className="">Proposer un évènement</span>
-        </button>
-      </Link>
-      <NavbarButton title="Rechercher un évènement" href ="/mes-evenements" icon="fas fa-search"></NavbarButton>
-      <NavbarButton title="Mes évenements" href="/mes-evenements" icon="fas fa-flag"></NavbarButton>
-      <NavbarButton title="Favoris" href="/en-chantier" icon="fas fa-heart"></NavbarButton>
-      <NavbarButton title="Actualités" href="/actualites" icon="fas fa-book-open"></NavbarButton>
-      <NavbarButton title="Messages" href="/en-chantier" icon="fas fa-envelope"></NavbarButton>
-      <Link href='/mon-compte'>
-            <a className='nav-item'>
-               {/*<Image src="/Todo" alt="TODO" layout="fill"/> */}
+  const [navbar, setNavbar] = useState(<></>);
+  const router = useRouter();
 
-                <span>Mon compte</span>
-            </a>
+  const DefaultNavBar = (path) =>
+    <nav className=" bg-light  justify-content-between  z-index-top  d-flex flex-row">
+      <span className="d-flex flex-row align-items-center">
+        <a className="navbar-brand nav-item px-3" href="/">
+          <img src="/img/LogoBleu.svg" alt="Pot'Age" className="w-logo" />
+        </a>
+        <Link href="/proposer-evenement" passHref>
+          <button className="nav-item btn-primary rounded h-button-event px-3 d-flex flex-row align-items-center">
+            <i className="far fa-plus-square spacing-plus-button-event fs-5"></i>
+            <span className="">Proposer un évènement</span>
+          </button>
         </Link>
-    </nav>
-    )
-  }
+      </span>
+      <span className="d-flex flex-row justify-content-end ">
+        <NavbarButton title="Rechercher un évènement" href="/rechercher-evenement" ><i className="fas fa-search"></i></NavbarButton>
+        <NavbarButton title="Mes évenements" href="/mes-evenements"><i className="fas fa-flag"></i></NavbarButton>
+        <NavbarButton title="Favoris" href="/en-chantier" ><i className="fas fa-heart"></i></NavbarButton>
+        <NavbarButton title="Actualités" href="/actualites" ><i className="fas fa-book-open"></i></NavbarButton>
+        <NavbarButton title="Messages" href="/en-chantier" ><i className="fas fa-envelope"></i></NavbarButton>
+        <NavbarButton title="Mon compte" href='/mon-compte'>
+          <img className="w-30px h-30px rounded-circle" src="/img/kelly.jpg" alt="photo de profil" layout="fill" />
+        </NavbarButton>
+      </span>
+    </nav>;
+
+  const HomeNavBar = (path) => <nav>Home</nav>;
+  const LoginNavbar = (path) =>   <nav className=" bg-light  justify-content-between  z-index-top d-flex flex-row">
+    <span className="d-flex flex-row align-items-center">
+      <a className="navbar-brand nav-item px-3" href="#">
+        <img src="/img/LogoBleu.svg" alt="Pot'Age" className="w-logo" />
+      </a>
+    </span>
+    <span className="d-flex flex-row justify-content-end px-5">
+      <NavbarButton title="Accueil" href="/"><img src='/img/house-solid.svg' className="w-20px"></img></NavbarButton>
+      <NavbarButton title="Inscription" href="/inscription" ><i className="fas fa-user"></i></NavbarButton>
+    </span>
+  </nav>;
+  const SignInNavBar = (path) =>   <nav className=" bg-light  justify-content-between  z-index-top d-flex flex-row">
+  <span className="d-flex flex-row align-items-center">
+    <a className="navbar-brand nav-item px-3" href="#">
+      <img src="/img/LogoBleu.svg" alt="Pot'Age" className="w-logo" />
+    </a>
+  </span>
+  <span className="d-flex flex-row justify-content-end px-5">
+    <NavbarButton title="Accueil" href="/" ><img src='/img/house-solid.svg' className="w-20px"></img></NavbarButton>
+    <NavbarButton title="Connexion" href="/login" ><i className="fas fa-user"></i></NavbarButton>
+  </span>
+</nav>;
+  useEffect(() =>
+    setNavbar(router.pathname == '/' ? HomeNavBar(router.pathname) : router.pathname == '/login' ? LoginNavbar(router.pathname) : router.pathname == '/inscription' ? SignInNavBar(router.pathname) : DefaultNavBar(router.pathname))
+    , [router.pathname]);
+
+  return (<>
+    {navbar}
+  </>)
+}

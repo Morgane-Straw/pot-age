@@ -50,13 +50,13 @@ h1, h2, h3, h4, h5, h6{
   font-weight: 600 !important;
 }
 .w-30px{
-  width: 30px !important;
+  width: 2rem !important;
 }
 .h-30px{
-  height: 30px !important;
+  height: 2rem !important;
 }
 .w-logo{
-  width: 200px;
+  width: 12.5rem;
 }
 .h-button-event{
   height:35px;
@@ -70,10 +70,34 @@ h1, h2, h3, h4, h5, h6{
 .w-20px{
   width : 20px;
 }
-.nav-item,  .active {
+.nav-button, .active {
+  box-sizing : border-box;
   border-bottom: 0.2rem ;
 }
 .nav-button:not(.active .nav-button):hover,  .active {
   border-bottom: solid #0F5E79;
 }
 /* .active .nav-button:hover */
+.z-index-img-vitrine{
+  z-index:0;
+}
+.bg-primary{
+  background-color: #0F5E79 !important;
+}
+.footer-button-size{
+  font-size:0.75em;
+}
+/* .footer-button-size:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+} */
+.button-unset{
+  all: unset;
+}
+.h-space-nav{
+  height: 3rem;
+}
+html{
+  zoom:200%
+}

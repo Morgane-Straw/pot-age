@@ -94,8 +94,8 @@ h1, h2, h3, h4, h5, h6{
 button{
   all: unset;
 }
-.h-space-nav{
-  height: 5rem;
+.p-nav{
+  padding-top: 5rem;
 }
 
 .opacity-90{
@@ -174,5 +174,23 @@ button{
   margin-left : 0em !important;
 }
 .w-button{
-  width: 5rem;
+  width: 6rem;
+}
+.text-mdp-ok{
+  color:#6ba739;
+}
+.text-mdp-gray{
+  color:#858585;
+}
+.bg-mdp-ok{
+  background-color:#6ba739;
+}
+.bg-mdp-gray{
+  background-color:#858585;
+}
+.fs-mdp-icon{
+  font-size:0.55rem;
+}
+.h-full{
+  max-height: calc(100%-5rem);
 }

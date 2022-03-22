@@ -15,7 +15,7 @@ export default function Layout({ children }) {
         router.pathname =='/' ? <HomeNavBar></HomeNavBar> 
         : (router.pathname =='/inscription' || router.pathname =='/login' ? <SignInLoginNavBar></SignInLoginNavBar> :<DefaultNavBar></DefaultNavBar> )
       }
-      {router.pathname=='/' ?"":<div className='h-space-nav'></div>}
+      {router.pathname=='/' ?"":<div className='p-nav'></div>}
       <main className='pb-5'>{children}</main> 
       {/* <Footer fontSize={fontSize} setFontSize ={setFontSize}/> */}
       <Footer zoom={zoom} setZoom ={setZoom}/>

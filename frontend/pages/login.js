@@ -34,7 +34,7 @@ export default class Login extends React.Component {
       <div className="container">
         <div className="row justify-content-center">
           <div className="d-none d-lg-block col-xl-6 col-lg-7">
-            <img src="/img/Profile Interface-cuate(2).svg" alt="illustration personne avec smartphone" />
+            <img src="/img/login.svg" alt="illustration personne avec smartphone" />
           </div>
           <div className="col-lg-5 col-xl-6 col">
             <div className="shadow rounded p-5 mt-5">

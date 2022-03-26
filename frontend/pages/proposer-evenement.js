@@ -1,12 +1,16 @@
 import { useEffect, useState } from "react";
-import FormEvent from "../components/form/proposer-evenement/FormEvent";
+// import FormEvent from "../components/form/proposer-evenement/FormEvent";
 import Page1Event from "../components/form/proposer-evenement/Page1Event"
 import Page2Event from "../components/form/proposer-evenement/Page2Event"
 import Page3Event from "../components/form/proposer-evenement/Page3Event"
+import NumeroPage from "../components/form/NumeroPage";
+import BoutonProgression from "../components/form/BoutonProgression";
 
 export default function ProposerEvenement() {
   const [pages, setPages] = useState();
   const [formPages, setFormPages] = useState();
+  const [pageActive, setPageActive] = useState(1);
+
   const [titre, setTitre] = useState();
   const [type, setType] = useState();
   const [categorie, setCategorie] = useState();
@@ -35,6 +39,7 @@ export default function ProposerEvenement() {
       <Page2Event
         setDate={e => setDate(e)}
         setHoraires={e => setHoraires(e)}
+        setLieu={e => setLieu(e)}
         setNbParticipants={e => setNbParticipants(e)}
         setAgeParticipants={e => setAgeParticipants(e)} />,
       <Page3Event
@@ -51,5 +56,20 @@ export default function ProposerEvenement() {
     ) : "";
   }, [pages]);
   return formPages ? <>
-    <FormEvent title='Proposer un nouvel évènement' pages={pages} formPages={formPages} valider={() => valider()}  ></FormEvent></> : <></>
-}
+    {[titre, type, categorie, description, image, date ? date.toString() : date, horaires, lieu, nbParticipants, ageParticipants]}
+    <form id="form" className="d-flex flex-column justify-content-center align-items-center h-full ">
+      <div className=" ">
+        <h1 className="text-primary fw-bold text-center">Proposer un nouvel évènement</h1>
+        <NumeroPage pages={pages} active={pageActive} setPageActive={setPageActive}></NumeroPage>
+        <div className="d-flex m-auto flex-row flex-wrap shadow-sm rounded-lg w-form-page justify-content-center align-items-center py-4 px-5 ">
+          {formPages ? formPages[pageActive - 1] : ""}
+          <div className="d-flex  flex-row-reverse justify-content-between flex-basis-100 ms-auto pe-5 pt-2">
+            {pageActive < pages.length ? <BoutonProgression label="Suivant" pageActive={pageActive} onClick={(a) => setPageActive(a)}></BoutonProgression> :
+              <BoutonProgression label="Confirmer" onClick={() => valider()} ></BoutonProgression>}
+            {pageActive > 1 ? <BoutonProgression label="Retour" pageActive={pageActive} onClick={(a) => setPageActive(a)}></BoutonProgression> : ""}
+
+          </div>
+        </div>
+      </div>
+    </form>
+  </>:<></>}

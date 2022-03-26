@@ -5,14 +5,14 @@ export default function Dropdown(props) {
     return <div className="mb-3">
         <label className="d-block text-primary fw-bold ms-1 w-select">Catégorie</label>
         <select id="categorie" className="form-select" 
-        // onSelect={aaaaa}
+        onChange={(e)=>props.setValue(e.target.value)}
         >
-            <option >Sélectionnez un type d'activité</option>
-            <option>Activités manuelles</option>
-            <option>Sport</option>
-            <option>Activités artistiques</option>
-            <option>Découverte de la nature</option>
-            <option>Jardinage</option>
+            <option value="none">Sélectionnez un type d'activité</option>
+            <option value="manuelle">Activités manuelles</option>
+            <option value="sport">Sport</option>
+            <option value="artistique">Activités artistiques</option>
+            <option value="nature">Découverte de la nature</option>
+            <option value="jardinage">Jardinage</option>
         </select>
     </div>
 }

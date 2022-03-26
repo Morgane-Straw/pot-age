@@ -14,7 +14,11 @@ const ImageUpload = (props) => {
     };
     const response = await axios
       .post(process.env.NEXT_PUBLIC_FRONTEND_ADDRESS + '/api/uploadfile', formData, config)
-      .then((res) => setImgUpload(process.env.NEXT_PUBLIC_Upload_Spot + '/' + res.data.data));
+      .then((res) => setImgUpload({
+        raw: process.env.NEXT_PUBLIC_Upload_Spot + '/' + res.data.data,
+        small: process.env.NEXT_PUBLIC_Upload_Spot + '/' + res.data.data,
+        regular:process.env.NEXT_PUBLIC_Upload_Spot + '/' + res.data.data,
+      }));
 
   };
 
@@ -27,14 +31,14 @@ const ImageUpload = (props) => {
         <img src="img/pictures.svg" className="h-1 me-2"></img>
         Parcourir
       </UiFileInputButton>
-      <span className="mx-2">{imgUpload ? imgUpload : ""}</span>
+      {/* <span className="mx-2">{imgUpload ? imgUpload.raw : ""}</span> */}
     </div>
     {imgUpload ?
       <img
-        className={"h-img-banque my-5 flex-grow-0 cursor-pointer rounded-3 " + (imgUpload == props.img ? "shadow-selected" : "")} 
-        src={imgUpload} 
-        onClick={()=>setFile(imgUpload)}
-        /> : ""}
+        className={"h-img-banque my-5 flex-grow-0 cursor-pointer rounded-3 " + (imgUpload.raw == props.img.raw && imgUpload.raw ? "shadow-selected" : "")}
+        src={imgUpload.raw}
+        onClick={() => props.setFile({ raw: imgUpload.raw })}
+      /> : ""}
 
   </>
   );

@@ -15,7 +15,7 @@ export default function ProposerEvenement() {
   const [type, setType] = useState();
   const [categorie, setCategorie] = useState();
   const [description, setDescription] = useState();
-  const [image, setImage] = useState();
+  const [image, setImage] = useState({raw:''});
   const [date, setDate] = useState();
   const [horaires, setHoraires] = useState([]);
   const [lieu, setLieu] = useState();
@@ -56,7 +56,7 @@ export default function ProposerEvenement() {
     ) : "";
   }, [pages]);
   return formPages ? <>
-    {[titre, type, categorie, description, image, date ? date.toString() : date, horaires, lieu, nbParticipants, ageParticipants]}
+    {[titre, type, categorie, description, image.raw, date ? date.toString() : date, horaires, lieu, nbParticipants, ageParticipants]}
     <form id="form" className="d-flex flex-column justify-content-center align-items-center h-full ">
       <div className=" ">
         <h1 className="text-primary fw-bold text-center">Proposer un nouvel évènement</h1>

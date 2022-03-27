@@ -31,7 +31,7 @@ export default function BanqueImage(props) {
             <input
                 type="text"
                 name="query"
-                className="input"
+                className="input rounded-left h-input p-2"
                 placeholder={query}
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
@@ -39,7 +39,7 @@ export default function BanqueImage(props) {
             />
             <button
                 type="button"
-                className="button" onClick={() => searchPhotos()}>
+                className="button rounded-right-1 py-1 px-1 px-2 text-white bg-primary" onClick={() => searchPhotos()}>
                 <i className="fas fa-search"></i>
             </button>
         </form>

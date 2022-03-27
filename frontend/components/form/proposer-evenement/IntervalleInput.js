@@ -4,7 +4,9 @@ import Label from "../Label";
 export default function IntervalleInput(props) {
     const [value1,setValue1]=useState(null);
     const [value2,setValue2]=useState(null);
-    useEffect(()=>{props.setValues([value1,value2])},[value1,value2])
+    useEffect(()=>{props.setValues([value1,value2])},[value1,value2]);
+    useEffect(()=>props.defaultValues?props.setValues(props.defaultValues):"",[]);
+
     return <>
         <Label label={props.label} id={props.id}></Label>
 
@@ -16,7 +18,8 @@ export default function IntervalleInput(props) {
                     onChange={(e) => {
                         setValue1(e.target.value)
                     }}
-                    id={props.id} />
+                    id={props.id} 
+                    defaultValue={props.defaultValues[0]}/>
             </div>
             
             <div className="d-flex flex-column flex-basis-50 ps-3">
@@ -25,7 +28,8 @@ export default function IntervalleInput(props) {
                     onChange={(e) => {
                         setValue2(e.target.value)
                     }}
-                    id={props.id} />
+                    id={props.id}
+                    defaultValue={props.defaultValues[1]} />
             </div>
         </div>
     </>

@@ -238,6 +238,10 @@ select .w-select{
   justify-self:end;
 }
 .h-img-banque{
+  max-height:15rem;
+  max-width:100%;
+}
+.h-div-img-import{
   height:15rem;
 }
 .h-resultats-banque{
@@ -278,4 +282,48 @@ select .w-select{
 }
 .overflow-scroll-y{
 overflow-y:scroll;
+}
+.rounded-right-1{
+  border-radius: 0px 0.5rem 0.5rem 0px ;
+}
+.rounded-left-1{
+  border-radius:  0.5rem 0px 0px 0.5rem  ;
+}
+.h-input{
+  height:2rem;
+}
+
+.img-confirmer-event{
+  width:45rem;
+  height:25rem;
+  object-fit:cover;
+}
+.w-previsualisation-event{
+  width:45rem;
+}
+
+.rounded-1{
+  border-radius: 1rem;
+}
+.rounded-2{
+  border-radius: 2rem;
+}
+.rounded-3{
+  border-radius: 3rem;
+}
+.rounded-4{
+  border-radius: 4rem;
+}
+.rounded-6{
+  border-radius: 6rem;
+}
+.rounded-top-3{
+  border-radius: 3rem 3rem 0 0;
+}
+.rounded-top-2{
+  border-radius: 2rem 2rem 0 0;
+}
+.shadow-card{
+  box-shadow: 0px 5px 20px #999; /*4*/
+
 }

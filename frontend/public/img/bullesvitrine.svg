@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="780" height="435.105" viewBox="0 0 780 435.105">
+  <defs>
+    <filter id="Ellipse_33" x="79" y="73" width="228" height="228" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_35" x="456" y="0" width="324" height="324" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_32" x="0" y="229" width="194" height="194" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Tracé_960" x="237" y="148.895" width="302.876" height="286.211" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-4"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Groupe_313" data-name="Groupe 313" transform="translate(-956 -927)">
+    <g id="Groupe_109" data-name="Groupe 109" transform="translate(-21 -55)">
+      <g transform="matrix(1, 0, 0, 1, 977, 982)" filter="url(#Ellipse_33)">
+        <circle id="Ellipse_33-2" data-name="Ellipse 33" cx="105" cy="105" r="105" transform="translate(88 79)" fill="#0f5e79"/>
+      </g>
+      <text id="_2" data-name="2" transform="translate(1158 1136)" fill="#fff" font-size="40" font-family="PTSerif-Caption, PT Serif Caption"><tspan x="0" y="0">2</tspan></text>
+      <text id="Je_complète_mon_profil" data-name="Je complète 
+mon profil" transform="translate(1170 1180)" fill="#fff" font-size="22" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-63.58" y="0">Je complète </tspan><tspan x="-49.313" y="35">mon profil</tspan></text>
+    </g>
+    <g id="Groupe_107" data-name="Groupe 107" transform="translate(-83 14)">
+      <g transform="matrix(1, 0, 0, 1, 1039, 913)" filter="url(#Ellipse_35)">
+        <circle id="Ellipse_35-2" data-name="Ellipse 35" cx="153" cy="153" r="153" transform="translate(465 6)" fill="#387388"/>
+      </g>
+      <text id="Je_partage_une_activité_conviviale_et_je_garde_les_liens_" data-name="Je partage une activité
+conviviale et je garde 
+les liens  " transform="translate(1657 1066)" fill="#fff" font-size="22" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-111.65" y="0">Je partage une activité</tspan><tspan x="-106.546" y="35">conviviale et je garde </tspan><tspan x="-45.43" y="70" xml:space="preserve">les liens  </tspan></text>
+    </g>
+    <text id="_4" data-name="4" transform="translate(1562 1021)" fill="#fff" font-size="40" font-family="PTSerif-Caption, PT Serif Caption"><tspan x="0" y="0">4</tspan></text>
+    <g id="Groupe_110" data-name="Groupe 110" transform="translate(118 150)">
+      <g transform="matrix(1, 0, 0, 1, 838, 777)" filter="url(#Ellipse_32)">
+        <circle id="Ellipse_32-2" data-name="Ellipse 32" cx="88" cy="88" r="88" transform="translate(9 235)" fill="#1e7896"/>
+      </g>
+      <text id="Je_m_inscris" data-name="Je m’inscris" transform="translate(877 1121)" fill="#fff" font-size="22" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">Je m’inscris</tspan></text>
+    </g>
+    <g id="Groupe_108" data-name="Groupe 108" transform="translate(-34 126.895)">
+      <g transform="matrix(1, 0, 0, 1, 990, 800.11)" filter="url(#Tracé_960)">
+        <path id="Tracé_960-2" data-name="Tracé 960" d="M142.438,0C221.1,0,284.876,60.041,284.876,134.105S221.1,268.211,142.438,268.211,0,208.17,0,134.105,63.772,0,142.438,0Z" transform="translate(246 154.89)" fill="#4c9eba"/>
+      </g>
+      <text id="Je_poste_une_proposition_d_événement_pour_partager_une_activité_que_j_aime_" data-name="Je poste une proposition 
+d’événement pour 
+partager une activité 
+que j’aime " transform="translate(1378.438 1074)" fill="#fff" font-size="22" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-125.114" y="0">Je poste une proposition </tspan><tspan x="-92.521" y="35">d’événement pour </tspan><tspan x="-103.697" y="70">partager une activité </tspan><tspan x="-53.801" y="105">que j’aime </tspan></text>
+    </g>
+    <text id="_3" data-name="3" transform="translate(1332 1151)" fill="#fff" font-size="40" font-family="PTSerif-Caption, PT Serif Caption"><tspan x="0" y="0">3</tspan></text>
+    <text id="_1" data-name="1" transform="translate(1041 1228)" fill="#fff" font-size="40" font-family="PTSerif-Caption, PT Serif Caption"><tspan x="0" y="0">1</tspan></text>
+  </g>
+</svg>

@@ -1,5 +1,8 @@
+import BarreRechercheEvent from '../components/recherche/BarreRechercheEvent';
 export default function RechercherEvenement() {
-    return <div>Welcome to Next.js!</div>
-  }
-  
-  
+  return <div>
+    <BarreRechercheEvent></BarreRechercheEvent>
+
+  </div>
+}
+

@@ -1,13 +1,22 @@
 import { FloatingLabel } from "./FloatingLabel";
 
-export default function Page3Event(props) {7
+export default function Page3Event(props) {
+    
     function capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
-      }
-      
+    }
+
     return <div className="position-relative shadow-card rounded-top-2 my-2 w-previsualisation-event">
         <div className="position-absolute d-flex flex-row p-2 ">
-            {props.ageParticipants ? <FloatingLabel>{props.ageParticipants[0] + " à " + props.ageParticipants[1] + " ans"}</FloatingLabel> : ""}
+            <FloatingLabel>{props.ageParticipants ?
+                props.ageParticipants[0] ?
+                    props.ageParticipants[1] ?
+                        props.ageParticipants[0] + ' à ' + props.ageParticipants[1] + "ans"
+                        : "A partir de " + props.ageParticipants[0] + "ans"
+                    : props.ageParticipants[1] ?
+                        "Jusqu'à " + props.ageParticipants[1] + "ans"
+                        : ""
+                : ""}</FloatingLabel>
             {props.horaires ? <FloatingLabel>{props.horaires[0] + " à " + props.horaires[1]}</FloatingLabel> : ""}
             {props.lieu ? <FloatingLabel>{props.lieu}</FloatingLabel> : ""}
 
@@ -20,7 +29,7 @@ export default function Page3Event(props) {7
             <h3 className="text-primary py-2 ">{props.titre}</h3>
             <div className="d-flex flex-row justify-content-between">
                 <span>
-                    <span>{props.date?capitalizeFirstLetter(props.date.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })):""}</span>
+                    <span>{props.date ? capitalizeFirstLetter(props.date.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })) : ""}</span>
                     <span>{", de " + props.horaires[0] + " à " + props.horaires[1]}</span>
                     <span>{", " + props.lieu}</span>
                 </span>
@@ -34,7 +43,7 @@ export default function Page3Event(props) {7
                             : ""
                     : ""}
                     {props.nbParticipants ? props.nbParticipants[0] || props.nbParticipants[1] ? ' participants' : '' : ''}</span>
-            </div>    
+            </div>
             <hr></hr>
             <p>{props.description}</p>
         </div>

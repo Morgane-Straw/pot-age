@@ -10,7 +10,7 @@ export default function Page2Event(props) {
             <Calendar onChange={(e)=>props.setDate(e)} defaultValue={props.date}></Calendar>
         </div>
         <div className="flex-basis-50 pe-5">
-            <IntervalleInput label="Horaires de l'évènement" id="horaire" placeholder1="..h.." placeholder2="..h.." label1="Début" label2="Fin" setValues={(e)=>props.setHoraires(e)} defaultValues={props.horaires}></IntervalleInput>
+            <IntervalleInput label="Horaires de l'évènement" type="time" id="horaire" placeholder1="..h.." placeholder2="..h.." label1="Début" label2="Fin" setValues={(e)=>props.setHoraires(e)} defaultValues={props.horaires}></IntervalleInput>
             <TextInput label="Lieu de l'évenement" id="lieu" placeholder="Entrez l'adresse de votre lieu de rencontre" setValue={(e)=>props.setLieu(e)}></TextInput>
             <IntervalleInput label="Nombre de participants (optionnel)" id="nbParticipants" setValues={e=>props.setNbParticipants(e)} type="number" defaultValues={props.nbParticipants}/>
             <IntervalleInput label='Âge participants (optionnel)' id="age" placeholder1="Pas d'âge minimum" placeholder2="Pas d'âge maximum" setValues={e=>props.setAgeParticipants(e)} type="number" defaultValues={props.ageParticipants}/>

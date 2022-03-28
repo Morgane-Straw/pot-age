@@ -32,7 +32,7 @@ export default function ProposerEvenement() {
   const [description, setDescription] = useState("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et varius risus, ac venenatis odio. Donec bibendum neque non nisl elementum, ut placerat urna fringilla. Quisque lobortis mauris sit amet leo facilisis, id volutpat nibh aliquet.  ");
   const [image, setImage] = useState({ raw: 'uploads/boy-g73ae189f4_1920.jpg' ,small: 'uploads/boy-g73ae189f4_1920.jpg' ,regular: 'uploads/boy-g73ae189f4_1920.jpg' });
   const [date, setDate] = useState(new Date());
-  const [horaires, setHoraires] = useState(["15h","17h"]);
+  const [horaires, setHoraires] = useState(["15:00","17:30"]);
   const [lieu, setLieu] = useState("MJC Lorraine, Nancy");
   const [nbParticipants, setNbParticipants] = useState([5,15]);
   const [ageParticipants, setAgeParticipants] = useState([5,77]);

@@ -16,9 +16,9 @@ export default function DefaultNavBar(path)
       <span className="d-flex flex-row justify-content-end ">
         <NavbarButton title="Rechercher un évènement" href="/rechercher-evenement" ><i className="fas fa-search"></i></NavbarButton>
         <NavbarButton title="Mes évenements" href="/mes-evenements"><i className="fas fa-flag"></i></NavbarButton>
-        <NavbarButton title="Favoris" href="/en-chantier" ><i className="fas fa-heart"></i></NavbarButton>
+        <NavbarButton title="Favoris" href="/favoris" ><i className="fas fa-heart"></i></NavbarButton>
         <NavbarButton title="Actualités" href="/actualites" ><i className="fas fa-book-open"></i></NavbarButton>
-        <NavbarButton title="Messages" href="/en-chantier" ><i className="fas fa-envelope"></i></NavbarButton>
+        <NavbarButton title="Messages" href="/messages" ><i className="fas fa-envelope"></i></NavbarButton>
         <NavbarButton title="Mon compte" href='/mon-compte'>
           <img className="w-30px h-30px rounded-circle" src="/img/kelly.jpg" alt="photo de profil" layout="fill" />
         </NavbarButton>

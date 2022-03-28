@@ -5,6 +5,13 @@ export default function Page3Event(props) {
     function capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
+    function substractHours(hs){
+        let h1=hs[0].split(':');
+        h1= parseInt(h1[0])*60+parseInt(h1[1])
+        let h2=hs[1].split(':');
+        h2= parseInt(h2[0])*60+parseInt(h2[1])
+        return Math.floor((h2-h1)/60)+"h"+((h2-h1)%60?(h2-h1)%60:"")
+    }
 
     return <div className="position-relative shadow-card rounded-top-2 my-2 w-previsualisation-event">
         <div className="position-absolute d-flex flex-row p-2 ">
@@ -17,7 +24,8 @@ export default function Page3Event(props) {
                         "Jusqu'à " + props.ageParticipants[1] + "ans"
                         : ""
                 : ""}</FloatingLabel>
-            {props.horaires ? <FloatingLabel>{props.horaires[0] + " à " + props.horaires[1]}</FloatingLabel> : ""}
+            {/* {props.horaires ? <FloatingLabel>{props.horaires[0] + " à " + props.horaires[1]}</FloatingLabel> : ""} */}
+            {props.horaires ? <FloatingLabel>{substractHours(props.horaires)}</FloatingLabel> : ""}
             {props.lieu ? <FloatingLabel>{props.lieu}</FloatingLabel> : ""}
 
         </div>

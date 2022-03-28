@@ -191,10 +191,8 @@ button,select, .unset{
 .fs-mdp-icon{
   font-size:0.55rem;
 }
-/* .h-full{
-  max-height: calc(100%-20rem);
-} */
-.h-img-inscription3{
+
+.h-img-inscription3,.h-img-chantier{
   height:20rem;
 }
 .h-img-inscription2{
@@ -263,8 +261,10 @@ select .w-select{
   margin-left: 25px;
 
 }
-.w-card-img{
+.wh-card-img{
   width:19rem;
+  height:12rem;
+  object-fit:cover;
 }
  
 .card-button1 {
@@ -329,7 +329,7 @@ overflow-y:scroll;
   box-shadow: 0px 5px 20px #999; /*4*/
 
 }
-.icon-favoris{
+.icon-favoris, .tiny-icon{
   width:1rem;
   height:1rem;
 }
@@ -358,4 +358,21 @@ overflow-y:scroll;
 }
 .text-justify{
   text-align:justify;
+}
+.shadow-light{
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.bg-light-gray{
+  background-color:#E6E6E6;
+}
+.w-button-participer{
+  width:8rem;
+}
+.h-full{
+  height:80vh;
+}
+.top-right{
+  top:1rem;
+  right:1rem;
 }

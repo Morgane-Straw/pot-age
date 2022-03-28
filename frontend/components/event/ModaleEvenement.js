@@ -3,19 +3,28 @@
 import { FloatingLabel } from "../form/proposer-evenement/FloatingLabel";
 import { useState } from "react";
 import MiniBio from "../user/MiniBio";
+import BoutonFavoris from "./BoutonFavoris";
+import BoutonParticiper from "./BoutonParticiper";
 export default function ModaleEvenement(props) {
     const [favoris, setFavoris] = useState(props.favoris ? props.favoris : false);
     const [hoverFavButton, setHoverFavButton] = useState(false);
 
     const showHideClassName = props.show ? "modal display-block" : "modal display-none";
+    function substractHours(hs) {
+        let h1 = hs[0].split(':');
+        h1 = parseInt(h1[0]) * 60 + parseInt(h1[1])
+        let h2 = hs[1].split(':');
+        h2 = parseInt(h2[0]) * 60 + parseInt(h2[1])
+        return Math.floor((h2 - h1) / 60) + "h" + ((h2 - h1) % 60 ? (h2 - h1) % 60 : "")
+    }
     function capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
     return (
         <div className={showHideClassName}>
-            <section className="modal-main py-1 px-3 text-dark ">
+            <section className="modal-main py-1 px-3 text-dark position-relative">
 
-                <div className="text-end ">
+                <div className="text-end position-absolute z-index-top top-right">
                     <button type="button" onClick={props.handleClose}
                         className="rounded bg-danger text-white px-2 py-1 my-1">
                         <img src="img/xmark-solid.svg" className="h-1 me-2"></img>
@@ -36,7 +45,7 @@ export default function ModaleEvenement(props) {
                                             "Jusqu'à " + props.event.ageParticipants[1] + "ans"
                                             : ""
                                     : ""}</FloatingLabel>
-                                {props.event.horaires ? <FloatingLabel>{props.event.horaires[0] + " à " + props.event.horaires[1]}</FloatingLabel> : ""}
+                                {props.event.horaires ? <FloatingLabel>{substractHours(props.event.horaires)}</FloatingLabel> : ""}
                                 {props.event.lieu ? <FloatingLabel>{props.event.lieu}</FloatingLabel> : ""}
 
                             </div>
@@ -46,14 +55,8 @@ export default function ModaleEvenement(props) {
                                 : ""}
                             <div className="px-4">
                                 <div className="d-flex flex-row justify-content-end my-1">
-                                    <button className={"button1 card-button2 rounded-1 text-center px-2 py-1 me-2 d-flex flex-row align-items-center" + (hoverFavButton ? " bg-primary text-white" : " bg-white text-primary border border-1 border-primary")}
-                                        onMouseEnter={() => setHoverFavButton(true)} onMouseLeave={() => setHoverFavButton(false)}
-                                        onClick={() => setFavoris(!favoris)}>
-                                        <img src={`/img/coeur_${favoris ? "plein" : "creux"}_${hoverFavButton ? "blanc" : "bleu"}.png`} className="icon-favoris mx-1" />
-                                        Ajouter aux favoris
-                                    </button>
-                                    <button className="button1 card-button1 rounded-1 bg-primary text-white text-center px-2 py-1" type="submit">
-                                        Participer</button>
+                                    <BoutonFavoris></BoutonFavoris>
+                                    <BoutonParticiper setParticipe={props.event.setParticipe}></BoutonParticiper>
                                 </div>
                                 <h3 className="text-primary py-2 ">{props.event.titre}</h3>
                                 <div className="d-flex flex-row justify-content-between">
@@ -79,12 +82,13 @@ export default function ModaleEvenement(props) {
 
                         </div>
                     </div>
-                    <div className="flex-basis-40">
+                    <div className="flex-basis-40 d-flex flex-column align-items-center mt-3 me-3">
                         <MiniBio user={{
                             avatar: { small: "img/man-ga9bafa7c6_1920.jpg" },
                             prenom: 'Jean',
                             nom: 'Serien',
-                            age:"68ans",
+                            age: "68ans",
+                            id:"js1",
                             introduction: "Jeune retraité, je cherche à donner de mon temps en proposant de transmettre mon savoir au travers d’activités manuelles comme le bricolage ou le jardinage par exemple. d’activités manuelles comme le bricolage ou le jardinage par exemple."
                         }}></MiniBio>
                     </div>

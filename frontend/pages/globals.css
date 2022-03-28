@@ -376,3 +376,7 @@ overflow-y:scroll;
   top:1rem;
   right:1rem;
 }
+.cover{
+object-fit:cover;
+object-position:50% 50%;
+}

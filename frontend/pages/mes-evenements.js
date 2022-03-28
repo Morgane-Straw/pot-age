@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import CarteEvenement from "../components/event/CarteEvenement";
 
 export default function MesEvenements() {
-  const setParticipe = (a, e) => { alert(a + e) };
   const [events, setEvents] = useState([]);
   useEffect(()=>setEvents([{
     id: 'basketball1',
@@ -19,7 +18,6 @@ export default function MesEvenements() {
     description: "Bonjour ! Je propose d’organiser un match de football sur le terrain de la MJC Lorraine de Vandoeuvre pour des enfants âgés entre 6 et 10 ans. Les parents sont également les bienvenus pour partager un échange convivial. N’hésitez pas à me contacter par message si vous souhaitez en discuter davantage ! Amicalement, Jean",
     nbParticipants: [5, 15],
     participe: false,
-    setParticipe: (e) => setParticipe('basketball1', e),
   }]), [])
   return <div>
     {events.map(event => <CarteEvenement

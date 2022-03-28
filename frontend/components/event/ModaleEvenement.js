@@ -56,7 +56,7 @@ export default function ModaleEvenement(props) {
                             <div className="px-4">
                                 <div className="d-flex flex-row justify-content-end my-1">
                                     <BoutonFavoris></BoutonFavoris>
-                                    <BoutonParticiper setParticipe={props.event.setParticipe}></BoutonParticiper>
+                                    <BoutonParticiper eventId={props.event.id}></BoutonParticiper>
                                 </div>
                                 <h3 className="text-primary py-2 ">{props.event.titre}</h3>
                                 <div className="d-flex flex-row justify-content-between">

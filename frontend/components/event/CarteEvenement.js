@@ -17,7 +17,7 @@ export default function CarteEvenement(props) {
                             "Jusqu'à " + props.event.ageParticipants[1] + "ans"
                             : ""
                     : ""}
-                    </FloatingLabel>
+                </FloatingLabel>
             </div>
             <div className="card-image">
                 <img src={props.event.img.regular} className="wh-card-img" alt="Illustration garçon jouant au basketball" />
@@ -30,7 +30,8 @@ export default function CarteEvenement(props) {
                 </div>
 
                 <div className="card-description">
-                    <p> {props.event.description.slice(0,105)+'...'}</p>
+                    <p>
+                        {props.event.description.slice(0, 105) + '...'}</p>
                 </div>
                 <div className="d-flex flex-row align-items-center">
                     {/* {} */}

@@ -10,9 +10,11 @@ export default function MiniBio(props) {
             <span className="text-primary mt-2 ms-2 me-2 ">{props.user.prenom + ' ' + props.user.nom}</span><span className=" mt-2 ">{props.user.age}</span>
         </div>
 
-        <p className="text-justify bg-light-gray p-2 rounded-3">{props.user.introduction}</p>
+        <p className="text-justify bg-light-gray p-2 rounded-3">
+            <img src='img/right-quotation-mark.png' className="tiny-icon my-1 mx-2"></img>
+            {props.user.introduction}</p>
         <button className="bg-primary text-white rounded-1 align-self-stretch text-center py-1 d-flex flex-row justify-content-center align-items-center"
-            onClick={() => router.push('/messages/'+props.user.id, undefined, { shallow: true })}>
+            onClick={() => router.push('/messages/' + props.user.id, undefined, { shallow: true })}>
             <img src="img/enveloppe_creux_blanc.png" className="tiny-icon me-2" ></img>Contacter</button>
     </div>
 }

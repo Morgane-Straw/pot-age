@@ -1,7 +1,9 @@
 import NavbarButton from "./NavbarButton";
-
+import { useUser } from "../../context/user";
 export default function DefaultNavBar(path)
-   { return <nav className=" bg-white justify-content-between position-relative z-index-top  d-flex flex-row position-fixed w-100">
+   { 
+     const user=useUser();
+     return <nav className=" bg-white justify-content-between position-relative z-index-top  d-flex flex-row position-fixed w-100">
       <span className="d-flex flex-row align-items-center">
         <a className="navbar-brand nav-item px-3 cursor-pointer" href="/">
           <img src="/img/LogoBleu.svg" alt="Pot'Age" className="w-logo" />
@@ -20,7 +22,7 @@ export default function DefaultNavBar(path)
         <NavbarButton title="Actualités" href="/actualites" ><i className="fas fa-book-open"></i></NavbarButton>
         <NavbarButton title="Messages" href="/messages" ><i className="fas fa-envelope"></i></NavbarButton>
         <NavbarButton title="Mon compte" href='/mon-compte'>
-          <img className="w-30px h-30px rounded-circle" src="/img/kelly.jpg" alt="photo de profil" layout="fill" />
+          <img className="w-30px h-30px rounded-circle" src={user.avatar.small} alt="photo de profil" layout="fill" />
         </NavbarButton>
       </span>
     </nav>

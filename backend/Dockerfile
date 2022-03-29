@@ -1,21 +1,13 @@
-FROM php:8.0.5
+FROM php:7.4-fpm-alpine as backend-stage
 
-RUN apt update -y && apt install -y openssl zip unzip git
+LABEL maintainer="xav"
+
+RUN docker-php-ext-install pdo_mysql sockets
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-RUN docker-php-ext-install pdo pdo_mysql
 
+RUN apk add --no-cache $PHPIZE_DEPS \
+    && pecl install xdebug-2.9.7 \
+    && docker-php-ext-enable xdebug
 
-WORKDIR /app/backend
+WORKDIR /var/www/html/backend
 COPY . .
-RUN composer install
-
-
-EXPOSE 8000
-CMD php artisan serve --host=0.0.0.0
-
-# Arguments defined in docker-composer.yml
-# ARG user
-# ARG uid
-
-# Install system dependencies
-# RUN apt

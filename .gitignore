@@ -231,3 +231,4 @@ lib*.pc
 
 sourcefiles/
 postgres/
+composer.lock

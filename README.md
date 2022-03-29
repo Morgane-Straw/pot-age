@@ -1,3 +1,9 @@
+Le site est accessible à http://www.xjacobguizon.com:8080/
+Pgadmin est accessible à http://www.xjacobguizon.com:5050/login?next=%2F
+Les requêtes API sont disponible à www.xjacobguizon.com:8080/api/fonction avec Postman par exemple
+
+Sur vos machine, remplacer tout ce qui est avant le port part localhost
+
 # Initialisation du projet
 
 Cloner le projet
@@ -12,6 +18,8 @@ cd pot-age
 cd backend
 
 composer install
+
+un soucis avec composer, essayez la dernière solution de ce post https://github.com/maximebf/php-debugbar/issues/482
 
 
 # Initialiser nextjs

@@ -228,4 +228,4 @@ lib*.pc
 /Release/
 /tmp_install/
 
-sourcefiles
+sourcefiles/

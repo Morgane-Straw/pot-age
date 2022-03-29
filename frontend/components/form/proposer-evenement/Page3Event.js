@@ -26,7 +26,7 @@ export default function Page3Event(props) {
                 : ""}</FloatingLabel>
             {/* {props.horaires ? <FloatingLabel>{props.horaires[0] + " à " + props.horaires[1]}</FloatingLabel> : ""} */}
             {props.horaires ? <FloatingLabel>{substractHours(props.horaires)}</FloatingLabel> : ""}
-            {props.lieu ? <FloatingLabel>{props.lieu}</FloatingLabel> : ""}
+            {props.lieu?.properties ? <FloatingLabel>{props.lieu.properties.name}</FloatingLabel> : ""}
 
         </div>
         {props.image.regular ?
@@ -39,7 +39,7 @@ export default function Page3Event(props) {
                 <span>
                     <span>{props.date ? capitalizeFirstLetter(props.date.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })) : ""}</span>
                     <span>{", de " + props.horaires[0] + " à " + props.horaires[1]}</span>
-                    <span>{", " + props.lieu}</span>
+                    <div>{props.lieu?.properties ? props.type=="demande"?props.lieu.properties.city+', '+props.lieu.properties.postcode : props.lieu.properties.name+', '+props.lieu.properties.city+', '+props.lieu.properties.postcode:""}</div>
                 </span>
                 <span className="text-end"> {props.nbParticipants ?
                     props.nbParticipants[0] ?

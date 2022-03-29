@@ -473,3 +473,22 @@ width:18%;
   padding:0.25rem;
   border-radius: 1rem;
 }
+input.geoapify-autocomplete-input{
+  all:unset
+}
+.input-lieu{
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  padding: .375rem .75rem;
+}
+.mb-form{
+  margin-bottom:10rem;
+}
+.h-img-mes-event{
+  height:100vh;
+}
+.fs-giant-icon{
+  display:block;
+  font-size:5rem;
+  height:5rem;
+}

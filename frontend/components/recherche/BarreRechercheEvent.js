@@ -9,13 +9,15 @@ export default function BarreRechercheEvent(props) {
     function search() {
         alert("ok");
     }
-    return <div className='position-relative'>{[ville,activite,dates?dates.map(e=>e.toLocaleDateString()):"",type]}
+    return <div className='position-relative'>
+        {/* {[ville?Object.keys(ville):"",activite,dates?dates.map(e=>e.toLocaleDateString()):"",type]} */}
     <div className="d-flex flex-row me-barre-recherche shadow-barre rounded-3 bg-light-gray h-barre">
         <ElementRecherche
             label="Ville"
             id="ville"
             img='img/Icon metro-home.svg'
             border='border-end'
+            type ="address"
             setValue={setVille} defaultValue={ville} />
         <ElementRecherche
             label="Activité" id="activite"

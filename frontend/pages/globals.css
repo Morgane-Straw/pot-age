@@ -452,6 +452,12 @@ object-fit:cover;
 .w-bouton-recherche{
   width: 5rem;
 }
+.w-input-date{
+  width: 9rem;
+}
+.h-input-date{
+  height: 2rem;
+}
 .w-img-bg-event{
   width:48rem;
 }
@@ -462,6 +468,8 @@ object-fit:cover;
 width:18%;
 }
 .active-tile{
-  background-color:#006edc;
-  color:white;
+  background-color:#ffc100;
+  color:#0f5e79;
+  padding:0.25rem;
+  border-radius: 1rem;
 }

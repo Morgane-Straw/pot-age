@@ -18,7 +18,7 @@ export default function DefaultNavBar(path)
           </a>
         </button>
       </span>
-      <span className="d-flex flex-row justify-content-end ">
+      <span className="d-flex flex-row justify-content-end shadow-light">
         <NavbarButton title="Rechercher un évènement" href="/rechercher-evenement" ><i className="fas fa-search"></i></NavbarButton>
         <NavbarButton title="Mes évenements" href="/mes-evenements"><i className="fas fa-flag"></i></NavbarButton>
         <NavbarButton title="Favoris" href="/favoris" ><i className="fas fa-heart"></i></NavbarButton>

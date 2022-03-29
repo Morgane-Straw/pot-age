@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react"
 import Calendar from 'react-calendar';
 
 export default function DatesPicker(props) {
-    const [dates, setDates] = useState(props.value ? props.value : []);
+    const [dates, setDates] = useState(props.defaultValue ? props.defaultValue : []);
     const [show, setShow] = useState(false);
     function dateAlreadyClicked(ds, e) {
         e = new Date(e)

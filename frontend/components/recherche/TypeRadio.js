@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react"
 
 export default function TypeRadio(props) {
-    const [checked, setChecked] = useState(props.value ? props.value : 'propositions');
+    const [checked, setChecked] = useState(props.defaultValue ? props.defaultValue : 'propositions');
     const [show, setShow] = useState(false);
     useEffect(() => props.setValue(checked), [checked]);
     return <div className="d-flex flex-column">

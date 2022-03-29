@@ -33,7 +33,7 @@ export default function ProposerEvenement() {
   const [image, setImage] = useState({ raw: 'uploads/boy-g73ae189f4_1920.jpg' ,small: 'uploads/boy-g73ae189f4_1920.jpg' ,regular: 'uploads/boy-g73ae189f4_1920.jpg' });
   const [date, setDate] = useState(new Date());
   const [horaires, setHoraires] = useState(["15:00","17:30"]);
-  const [lieu, setLieu] = useState("MJC Lorraine, Nancy");
+  const [lieu, setLieu] = useState({properties:{name:"MJC Lorraine", city:"Vandoeuvre-lès-Nancy",}});
   const [nbParticipants, setNbParticipants] = useState([5,15]);
   const [ageParticipants, setAgeParticipants] = useState([5,77]);
   const [boutonConfirmer, setBoutonConfirmer]=useState(<></>)
@@ -110,8 +110,9 @@ export default function ProposerEvenement() {
       }} url='evenement'/> )},
     [titre, type, categorie, description, image.raw, date ? date.toString() : date, horaires, lieu, nbParticipants, ageParticipants]);
   return formPages ? <>
+  {lieu?.properties?Object.keys(lieu.properties).join(" "):""}
     {/* {[titre, type, categorie, description, image.raw, date ? date.toString() : date, horaires, lieu, nbParticipants, ageParticipants]} */}
-    <form id="form" className="d-flex flex-column justify-content-center align-items-center h-full ">
+    <form id="form" className="d-flex flex-column  align-items-center  mb-form">
       <div className=" ">
         <h1 className="text-primary fw-bold text-center">Proposer un nouvel évènement</h1>
         <NumeroPage pages={pages} active={pageActive} setPageActive={setPageActive}></NumeroPage>

@@ -53,9 +53,9 @@ export default function LieuInput(props) {
             suggestionsChange={onSuggectionChange}
         /> */}
 
-        <GeoapifyGeocoderAutocomplete placeholder="Entrez une adresse"
-            value={props.value}
-            type={'city'}
+        <GeoapifyGeocoderAutocomplete placeholder={props.placeholder?props.placeholder:"Entrez une adresse"}
+            value={props.defaultValue}
+            type={props.type}
             lang="fr"
             // position={position}
             limit={5}

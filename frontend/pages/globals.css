@@ -43,7 +43,7 @@ a {
 #section1{
   background-image: url('/img/pexels-andrea-piacquadio-3768140.jpg');
   background-size: 100%;
-  background-position: 0 -300px;
+  background-position: 0 -10rem;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -67,6 +67,9 @@ h1, h2, h3, h4, h5, h6{
 .z-index-top{
   z-index: 30;
 }
+.z-index-bottom{
+  z-index: -30;
+}
 .w-20px{
   width : 20px;
 }
@@ -86,6 +89,9 @@ h1, h2, h3, h4, h5, h6{
 }
 .border-primary{
   border-color: #0F5E79 !important;
+}
+.border-gray{
+  border-color: #a59da8 !important; 
 }
 .footer-button-size{
   font-size:0.75em;
@@ -288,6 +294,9 @@ overflow-y:scroll;
 .rounded-right-1{
   border-radius: 0px 0.5rem 0.5rem 0px ;
 }
+.rounded-right-3{
+  border-radius: 0px 3rem 3rem 0px ;
+}
 .rounded-left-1{
   border-radius:  0.5rem 0px 0px 0.5rem  ;
 }
@@ -310,7 +319,7 @@ overflow-y:scroll;
 .rounded-2{
   border-radius: 2rem;
 }
-.rounded-3{
+.rounded-full-3{
   border-radius: 3rem;
 }
 .rounded-4{
@@ -325,7 +334,7 @@ overflow-y:scroll;
 .rounded-top-2{
   border-radius: 2rem 2rem 0 0;
 }
-.shadow-card{
+.shadow-card,{
   box-shadow: 0px 5px 20px #999; /*4*/
 
 }
@@ -376,7 +385,83 @@ overflow-y:scroll;
   top:1rem;
   right:1rem;
 }
+.top-right-0{
+  top:0rem;
+  right:0rem;
+}
 .cover{
 object-fit:cover;
-object-position:50% 50%;
+}
+.w-text-banner{
+  width : 38rem;
+}
+.pt-banner{
+  padding-top:10rem;
+}
+.cf {
+  position:relative;
+  margin:0 auto;
+  height:4rem;
+}
+
+.cf img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+.bg-transition {
+
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out;
+  -o-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.text-transition {
+
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+.opacity-0{
+  opacity:0;
+}
+.text-dark-primary{
+  color:#073340;
+}
+.mts-event{
+  margin-top:5rem;
+  margin-left:7rem;
+}
+
+.me-barre-recherche{
+  margin-right:7rem;
+}
+.recherche-icon{
+  width:1.5rem;
+  height:1.5rem;
+}
+.shadow-barre{
+  box-shadow: 0px 3px 6px #999; /*4*/
+
+}
+.w-bouton-recherche{
+  width: 5rem;
+}
+.w-img-bg-event{
+  width:48rem;
+}
+.h-barre{
+  height:4.5rem;
+}
+.w-elt-barre{
+width:18%;
+}
+.active-tile{
+  background-color:#006edc;
+  color:white;
 }

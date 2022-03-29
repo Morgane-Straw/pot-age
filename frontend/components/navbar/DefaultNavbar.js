@@ -1,19 +1,22 @@
 import NavbarButton from "./NavbarButton";
 import { useUser } from "../../context/user";
+import { useRouter } from 'next/router';
+
 export default function DefaultNavBar(path)
    { 
      const user=useUser();
+     const router =useRouter();
      return <nav className=" bg-white justify-content-between position-relative z-index-top  d-flex flex-row position-fixed w-100">
       <span className="d-flex flex-row align-items-center">
         <a className="navbar-brand nav-item px-3 cursor-pointer" href="/">
           <img src="/img/LogoBleu.svg" alt="Pot'Age" className="w-logo" />
         </a>
-        <a href="/proposer-evenement" passHref>
-          <button className="nav-item btn-primary rounded h-button-event px-3 d-flex flex-row align-items-center ">
+        <button onClick={()=>router.push("/proposer-evenement",undefined, { shallow: true })} >
+          <a className="nav-item btn-primary rounded h-button-event px-3 d-flex flex-row align-items-center ">
             <i className="far fa-plus-square spacing-plus-button-event fs-5"></i>
             <span className="">Proposer un évènement</span>
-          </button>
-        </a>
+          </a>
+        </button>
       </span>
       <span className="d-flex flex-row justify-content-end ">
         <NavbarButton title="Rechercher un évènement" href="/rechercher-evenement" ><i className="fas fa-search"></i></NavbarButton>

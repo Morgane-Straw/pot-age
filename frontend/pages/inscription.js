@@ -71,7 +71,7 @@ export default function Inscription() {
 
   return formPages ? <>
     {/* <Form title='Inscription' pages={pages} formPages={formPages} valider={() => valider()}  ></Form></> : <></> */}
-    <form id="form" className="d-flex flex-column justify-content-center align-items-center h-full ">
+    <form id="form" className="d-flex flex-column  align-items-center  ">
       <div className=" ">
         <h1 className="text-primary fw-bold text-center">Inscription</h1>
         <NumeroPage pages={pages} active={pageActive} setPageActive={setPageActive}></NumeroPage>

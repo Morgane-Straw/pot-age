@@ -44,7 +44,7 @@
   <div className ="App">
         <div id='section1'>
           <div className='container'>
-            <div className='col-md-4 pt-5 pb-5'>
+            <div className='w-text-banner pt-banner  pb-5'>
               <h1 className='h1 text-white'>{txt_titre}</h1>
               <p className='text-white lead'>{txt_desc}</p>
               <a className='btn btn-primary'>{txt_plus}</a>

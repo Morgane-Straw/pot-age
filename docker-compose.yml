@@ -5,7 +5,7 @@ services:
   build:
    context: ./backend
    dockerfile: Dockerfile
-  restart: unless-stopped
+  restart: always
   volumes:
    - ./backend:/var/www/html/backend
    - enlive-vendor:/var/www/html/backend/vendor

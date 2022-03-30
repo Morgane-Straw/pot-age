@@ -6,6 +6,7 @@ import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
 import '@fortawesome/fontawesome-free/css/brands.css';
 import '@fortawesome/fontawesome-free/css/solid.css';
 import '@fortawesome/fontawesome-free/css/regular.css';
+import 'react-calendar/dist/Calendar.css';
 
 export default function MyApp({ Component, pageProps }) {
   return (<>

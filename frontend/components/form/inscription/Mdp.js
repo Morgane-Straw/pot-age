@@ -4,22 +4,24 @@ import { useState, useEffect } from "react";
 
 export default function Mdp(props) {
     const [password, setPassword] = useState(props.password);
-    useEffect(()=> props.setPassword(password), [password]);
     const test = (p, exp) => {
         const regex = new RegExp(exp);
         return regex.test(p);
     }
     const [conditions, setConditions] = useState({ longueur: false, majuscule: false, minuscule: false, chiffre: false, special: false });
-    useEffect(() => setConditions({
-        longueur: password.length >= 8,
-        majuscule: test(password, "(?=.*?[A-Z])"),
-        minuscule: test(password, "(?=.*?[a-z])"),
-        chiffre: test(password, "(?=.*?[0-9])"),
-        special: test(password, "(?=.*?[#?!@$%^&*-])")
-    }), [password]);
-    const caractereSpecial = () => { };
+    useEffect(() => {
+        setConditions({
+            longueur: password.length >= 8,
+            majuscule: test(password, "(?=.*?[A-Z])"),
+            minuscule: test(password, "(?=.*?[a-z])"),
+            chiffre: test(password, "(?=.*?[0-9])"),
+            special: test(password, "(?=.*?[#?!@$%^&*-])")
+        });
+        props.setPassword(password)
+    }, [password]);
+    useEffect(() => props.setValide(conditions.longueur && conditions.majuscule && conditions.minuscule && conditions.chiffre && conditions.special)
+        , [conditions])
     return <div className="mb-3 ">
-
         <MdpInput password={password} setPassword={setPassword} />
         <div className="d-flex flex-row flex-wrap text-mdp-gray fw-normal">
             <div className="flex-basis-100">Le mot de passe doit contenir</div>

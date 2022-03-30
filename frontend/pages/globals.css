@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5, h6{
   font-size:0.75em;
 }
 
-button{
+button,select{
   all: unset;
 }
 .p-nav{
@@ -124,7 +124,7 @@ button{
   background-color:#ffc100;
 }
  .top-name-page{
-   top: 60px;
+   top: 3.5rem;
  }
  .nowrap{
    white-space : nowrap;
@@ -140,10 +140,10 @@ button{
   flex-basis: 100%;
 }
 .pb-num-pages{
-    padding-bottom: 5rem;
+    padding-bottom: 3rem;
 }
 
-.talkbubble{
+.talkbubble, .content-box{
   box-sizing: content-box;
 }
 
@@ -156,9 +156,9 @@ button{
   bottom:  100%;
   width: 0;
   height: 0;
-  border-left: 0.5rem solid transparent;
-  border-bottom: 1rem solid #ffc100;;
-  border-right: 0.5rem solid transparent;
+  border-left: 0.4rem solid transparent;
+  border-bottom: 0.8rem solid #ffc100;;
+  border-right: 0.4rem solid transparent;
 }
  .text-gray{
    color:#a7a7a7;
@@ -191,6 +191,7 @@ button{
 .fs-mdp-icon{
   font-size:0.55rem;
 }
+<<<<<<< HEAD
 .h-full{
   max-height: calc(100%-5rem);
 }
@@ -220,3 +221,45 @@ button{
   font-size:0.75em;
   margin-left: 15px;
 }
+=======
+/* .h-full{
+  max-height: calc(100%-20rem);
+} */
+.h-img-inscription3{
+  height:20rem;
+}
+.h-img-inscription2{
+  height:25rem;
+}
+.h-img-inscription1{
+  height:22rem;
+}
+.transform-scale{
+  transform: scale(0.8);
+  transform-origin: 0% 0% 0px;
+}
+select .w-select{
+  width:unset !important;
+}
+.h-text-area{
+  height:7rem;
+}
+.w-30{
+  width:30%;
+}
+.react-calendar__navigation{
+  text-align:center;
+  background-color:#e6e6e6;
+}
+/* .react-calendar__month-view__weekdays__weekday,.react-calendar{
+  background-color:#ebebeb;
+} */
+.react-calendar__month-view__days__day--weekend:not(.react-calendar__month-view__days__day--neighboringMonth) abbr{ 
+  color:#0F5E79;
+}
+.form .react-calendar{
+  border-style:none;
+  background-color:#f2f2f2;
+  margin:1rem 0;
+}
+>>>>>>> ca3aec3885671f69c74b1769359d80ff7e2d574f

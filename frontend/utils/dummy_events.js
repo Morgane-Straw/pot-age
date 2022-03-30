@@ -89,18 +89,18 @@ const dummy_events=[{
     nbParticipants: [5, 15],
     participe: false,
   }, {
-    id: 'basketball1',
-    titre: "Basketball7",
+    id: 'Initiation au crochet',
+    titre: "Initiation au crochet",
     img: {
-      raw: "https://images.unsplash.com/photo-1515523110800-9415d13b84a8?ixid=MnwzMTMxMDh8MHwxfHNlYXJjaHwyfHxiYXNrZXRiYWxsfGVufDB8fHx8MTY0ODQ1ODc2OA&ixlib=rb-1.2.1",
-      regular: "https://images.unsplash.com/photo-1515523110800-9415d13b84a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMTMxMDh8MHwxfHNlYXJjaHwyfHxiYXNrZXRiYWxsfGVufDB8fHx8MTY0ODQ1ODc2OA&ixlib=rb-1.2.1&q=80&w=1080",
-      small: "https://images.unsplash.com/photo-1515523110800-9415d13b84a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMTMxMDh8MHwxfHNlYXJjaHwyfHxiYXNrZXRiYWxsfGVufDB8fHx8MTY0ODQ1ODc2OA&ixlib=rb-1.2.1&q=80&w=400"
+      raw: "https://images.unsplash.com/photo-1648217736318-fbc4abc138ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dHJpY290fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60",
+      regular: "https://images.unsplash.com/photo-1648217736318-fbc4abc138ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dHJpY290fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60",
+      small: "https://images.unsplash.com/photo-1648217736318-fbc4abc138ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dHJpY290fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60"
     },
     date: new Date().toString(),
     horaires: ['14:00', "16:00"],
     lieu: "MJC Lorraine",
     ageParticipants: [6, 10],
-    description: "Bonjour ! Je propose d’organiser un match de football sur le terrain de la MJC Lorraine de Vandoeuvre pour des enfants âgés entre 6 et 10 ans. Les parents sont également les bienvenus pour partager un échange convivial. N’hésitez pas à me contacter par message si vous souhaitez en discuter davantage ! Amicalement, Jean",
+    description: "Bonjour ! Je propose d’organiser un atelier d'initiation au crochet à la MJC Lorraine de Vandoeuvre pour des enfants âgés entre 6 et 10 ans. Les parents sont également les bienvenus pour partager un échange convivial. N’hésitez pas à me contacter par message si vous souhaitez en discuter davantage ! Amicalement, Jean",
     nbParticipants: [5, 15],
     participe: false,
   }, {

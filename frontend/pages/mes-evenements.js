@@ -12,7 +12,7 @@ export default function MesEvenements(props) {
 
 
   useEffect(() => setRow1(props.events_participe ? <RowEvents events={props.events_participe}>
-    <div className="card d-flex flex-column justify-content-center align-items-center text-primary fs-4 text-center p-5 cursor-pointer flex-grow-1 flex-shrink-0"
+    <div className="card d-flex flex-column justify-content-center align-items-center text-primary fs-4 text-center p-5 cursor-pointer flex-grow-1 flex-shrink-0 mb-3"
       onClick={() => router.push('/rechercher-evenement', undefined, { shallow: true })}>
 
       <i className="fas fa-search  fs-giant-icon mb-3"></i>
@@ -27,7 +27,7 @@ export default function MesEvenements(props) {
     </div>
   </RowEvents> : ""), [props.events_organise]);
   return <div className="">
-    <img src='img/pexels-photo-2050994.png' alt='femme âgée souriant dans un buisson de fleurs' className='position-fixed top-right-0 z-index-bottom h-img-mes-event '></img>
+    <img src='img/pexels-photo-2050994.png' alt='femme âgée souriant dans un buisson de fleurs' className='position-fixed top-right-0 z-index-bottom h-img-mes-event mb-3'></img>
     <h1 className="text-primary ms-5">
       Mes évènements
     </h1>

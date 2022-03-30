@@ -139,6 +139,9 @@ button,select, .unset{
  .border-light-gray{
    border-color : #ececec;
  }
+ .flex-basis-30{
+  flex-basis: 30%;
+}
  .flex-basis-50{
   flex-basis: 50%;
 }
@@ -334,7 +337,7 @@ overflow-y:scroll;
 .rounded-top-2{
   border-radius: 2rem 2rem 0 0;
 }
-.shadow-card,{
+.shadow-card{
   box-shadow: 0px 5px 20px #999; /*4*/
 
 }

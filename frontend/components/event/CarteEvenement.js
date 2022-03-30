@@ -6,7 +6,7 @@ import ModaleEvenement from "./ModaleEvenement";
 export default function CarteEvenement(props) {
     const [showModal, setShowModal] = useState(false);
     return (
-        <div className="card position-relative">
+        <div className="card position-relative flex-grow-0 flex-shrink-0 mb-3">
             <div className="position-absolute">
                 <FloatingLabel>{props.event.ageParticipants ?
                     props.event.ageParticipants[0] ?

@@ -8,14 +8,13 @@ export default function RowEvents(props) {
     () => {
       setRow([props.children,
       ...props.events.map(event =>
-        <div className="flex-grow-1 flex-shrink-0">
           <CarteEvenement
             event={event}
           />
-        </div>)])
+        )])
     }, []);
 
-  return <div className=" mb-5  d-block d-flex flex-row">
+  return <div className=" mt-4 mb-3  d-block d-flex flex-row">
     
     <div className={"d-flex  justify-content-center align-items-center ms-2"}
       onClick={() => i>0?setI1(i - 3):""}>

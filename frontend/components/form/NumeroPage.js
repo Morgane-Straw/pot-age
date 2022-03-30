@@ -9,7 +9,7 @@ export default function NumeroPage(props) {
                         >
                             {i.number}
                         </span>
-                        <span className="position-absolute rounded bg-yellow fs-6 text-white py-1 px-3 top-name-page nowrap talkbubble">{i.name}</span>
+                        <span className="position-absolute rounded bg-yellow text-dark-primary fs-6  py-1 px-3 top-name-page nowrap talkbubble">{i.name}</span>
                     </>
                         : <>
                             <span className="rounded-circle d-block square-page-number d-flex justify-content-center align-items-center text-gray cursor-pointer"

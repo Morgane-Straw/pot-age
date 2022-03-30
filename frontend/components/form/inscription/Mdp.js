@@ -3,7 +3,7 @@ import MdpInput from "./MdpInput";
 import { useState, useEffect } from "react";
 
 export default function Mdp(props) {
-    const [password, setPassword] = useState(props.password);
+    const [password, setPassword] = useState(props.password?props.password:"");
     const test = (p, exp) => {
         const regex = new RegExp(exp);
         return regex.test(p);
@@ -22,7 +22,7 @@ export default function Mdp(props) {
     useEffect(() => props.setValide(conditions.longueur && conditions.majuscule && conditions.minuscule && conditions.chiffre && conditions.special)
         , [conditions])
     return <div className="mb-3 ">
-        <MdpInput password={password} setPassword={setPassword} />
+        <MdpInput password={password} setPassword={setPassword} defaultValue={props.defaultValue}/>
         <div className="d-flex flex-row flex-wrap text-mdp-gray fw-normal">
             <div className="flex-basis-100">Le mot de passe doit contenir</div>
 

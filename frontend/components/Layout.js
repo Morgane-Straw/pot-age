@@ -8,9 +8,10 @@ import { useState } from 'react';
 export default function Layout({ children }) {
   const router = useRouter();
   const [zoom, setZoom]=useState(100);
+  
 
   return (
-    <html style={{'zoom':zoom+"%"}}>
+    <div style={{zoom:zoom+"%"}}>
       {
         router.pathname =='/' ? <HomeNavBar></HomeNavBar> 
         : (router.pathname =='/inscription' || router.pathname =='/login' ? <SignInLoginNavBar></SignInLoginNavBar> :<DefaultNavBar></DefaultNavBar> )
@@ -19,6 +20,6 @@ export default function Layout({ children }) {
       <main className='pb-5'>{children}</main> 
       {/* <Footer fontSize={fontSize} setFontSize ={setFontSize}/> */}
       <Footer zoom={zoom} setZoom ={setZoom}/>
-    </html>
+    </div>
   )
 }

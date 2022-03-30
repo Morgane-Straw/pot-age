@@ -44,7 +44,7 @@
   <div className ="App">
         <div id='section1'>
           <div className='container'>
-            <div className='col-md-4 pt-5 pb-5'>
+            <div className='w-text-banner pt-banner  pb-5'>
               <h1 className='h1 text-white'>{txt_titre}</h1>
               <p className='text-white lead'>{txt_desc}</p>
               <a className='btn btn-primary'>{txt_plus}</a>
@@ -54,35 +54,35 @@
         <div className='container'>
           <div className='row gx-5 mt-5'>
             <div className='col-md-4'>
-              <Image src='/img/vitrine1-carre.jpg' className='img-fluid mb-3' alt="Todo" layout="fill"></Image>
+              <img src='/img/vitrine1-carre.jpg' className='img-fluid mb-3 ' alt="Todo"/>
             </div>
             <div className='col-md-8'>
               <h2 className='h2 text-primary'>Senior ?</h2>
               <p>Vous souhaitez vous engager au sein de votre quartier ? Vous souhaitez transmettre votre savoir faire aux plus jeunes ? Pot’Âgé vous permet de proposer vos évènements auprès des plus jeunes dans votre quartier !</p>
               <h3 className='h4 text-primary'>Comment ça marche ?</h3>
-              <Image src='/img/Groupe 311.svg' className='img-fluid' alt="Todo" layout="fill"></Image>
+              <img src='/img/Groupe 311.svg' className='img-fluid cover' alt="Todo" />
             </div>
           </div>
           <div className='row gx-5 mt-5'>
             <div className='col-md-4 order-md-1'>
-                <Image src='/img/vitrine2-carre.jpg' className='img-fluid mb-3' alt="Todo" layout="fill"></Image>
+                <img src='/img/vitrine2-carre.jpg' className='img-fluid mb-3 cover' alt="Todo" />
             </div>
             <div className='col-md-8 order-md-0'>
               <h2 className='h2 text-primary'>Famille ?</h2>
               <p>{txt_question_1}</p>
               <h3 className='h4 text-primary'>{txt_question_2}</h3>
-              <Image src='/img/Groupe 312.svg' className='img-fluid' alt="Todo" layout="fill"></Image>
+              <img src='/img/Groupe 312.svg' className='img-fluid cover' alt="1 Je m'inscris, 2 Je cherche des évènements qui pourraient plaire à mes enfants, 3 J'inscris mes enfants à une activité ou je poste une demande d'activité si je n'ai pas trouvé celle qui me correspond, 4 Mes enfants partagent une activité conviviale et construisent de nouveaux liens" />
             </div>
           </div>
           <div className='row gx-5 mt-5'>
             <div className='col-md-4'>
-              <Image src='/img/vitrine3-carre.jpg' className='img-fluid mb-3' alt="Todo" layout="fill"></Image>
+              <img src='/img/vitrine3-carre.jpg' className='img-fluid mb-3 cover' alt="grand père avec sa petite fille" />
             </div>
             <div className='col-md-8'>
               <h2 className='h2 text-primary'>Etablissement ?</h2>
               <p>{txt_question_3}</p>
               <h3 className='h4 text-primary'>Comment ça marche ?</h3>
-              <Image src='/img/Groupe 313.svg' className='img-fluid' alt="Todo" layout="fill"></Image>
+              <img src='/img/Groupe 313.svg' className='img-fluid cover' alt="Todo" />
             </div>
           </div>
         </div>

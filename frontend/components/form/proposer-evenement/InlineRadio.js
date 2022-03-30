@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 
 export default function InlineRadio(props) {
-    const[checked,setChecked]=useState('proposition')
+    const[checked,setChecked]=useState(props.checked)
     useEffect(()=>props.setValue(checked), [checked]);
     return <div className="mb-3 ">
         

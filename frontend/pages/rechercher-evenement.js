@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   import React from 'react';
   import Image from "next/image"
   import Head from "next/head"
@@ -34,3 +35,15 @@ export default function RechercherEvenement() {
 }
 
 
+=======
+import BarreRechercheEvent from '../components/recherche/BarreRechercheEvent';
+export default function RechercherEvenement() {
+  return <div className=' mts-event'>
+    <img src='img/gr9y07ie.svg' alt='femme âgée avec une une jeune femme' className='position-absolute top-right-0 z-index-bottom w-img-bg-event'></img>
+    
+      <h1 className='text-primary'>Rechercher un évènement</h1>
+      <BarreRechercheEvent></BarreRechercheEvent>
+    </div>
+}
+
+>>>>>>> ef5a9f3737c62fc594ae2c652ddea01359d000bd

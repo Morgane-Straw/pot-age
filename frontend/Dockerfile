@@ -1,21 +1,11 @@
-FROM node:alpine
-ENV PORT 3000
+FROM node:14.15-alpine as frontend-stage
 
-# Create app directory
-RUN mkdir -p /app/frontend
-WORKDIR /app/frontend
+LABEL maintainer="xav"
 
-# Installing dependencies
-Copy package*.json /app/frontend/
-RUN npm install
+WORKDIR /var/www/html/frontend
 
-# Copying sourcesfiles
-COPY . /app/frontend/
+COPY . .
 
-# Building app
-RUN npm run build
 EXPOSE 3000
 
-# Running the app
-# En prod, changer to CMD "npm" "start"
-CMD "npm" "run" "dev"
+CMD [ "yarn", "dev" ]

@@ -14,6 +14,6 @@ export default function Page1(props) {
                 { id: "rechercheAnim", label: "Je recherche des animations pour mes enfants" },
                 { id: "encadrant", label: "Je travaille dans l'animation, l'enseignement ou le secteur médico-social" }
             ]} 
-            setValue={(a)=>props.setSituation(a)}/>
+            setValue={(a)=>props.setSituation(a)} defaultValue={props.situation}/>
     </>
 };

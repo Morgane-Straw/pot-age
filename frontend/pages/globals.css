@@ -492,3 +492,15 @@ input.geoapify-autocomplete-input{
   font-size:5rem;
   height:5rem;
 }
+.overflow-x-auto{
+  overflow-x:auto;
+}
+.overflow-x-hidden{
+  overflow-x:hidden;
+}
+.h-row-mes-events{
+  height:22rem;
+}
+.w-row-mes-events{
+  width:62rem;
+}

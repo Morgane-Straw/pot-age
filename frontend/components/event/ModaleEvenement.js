@@ -61,7 +61,7 @@ export default function ModaleEvenement(props) {
                                 <h3 className="text-primary py-2 ">{props.event.titre}</h3>
                                 <div className="d-flex flex-row justify-content-between">
                                     <span>
-                                        <span>{props.event.date ? capitalizeFirstLetter(props.event.date.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })) : ""}</span>
+                                        <span>{props.event.date ? capitalizeFirstLetter(typeof(props.event.date)=="string"?new Date(props.event.date).toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }):props.event.date.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })) : ""}</span>
                                         <span>{", de " + props.event.horaires[0] + " à " + props.event.horaires[1]}</span>
                                         <span>{", " + props.event.lieu}</span>
                                     </span>

@@ -9,7 +9,7 @@ export default function LieuInput(props) {
     const value = useContext(RechercheContext);
     const [geocoder, setGeocoder] = useState();
     useEffect(() => setGeocoder(<GeoapifyGeocoderAutocomplete placeholder={props.placeholder ? props.placeholder : "Entrez une adresse"}
-        value={value.recherche.lieu}
+        value={value.recherche.lieu?.properties?.name}
         type={props.type}
         lang="fr"
         // position={position}
@@ -26,8 +26,8 @@ export default function LieuInput(props) {
     />), [value.recherche.lieu])
 
 
-    function onPlaceSelect(value) {
-        value.setLieu(value);
+    function onPlaceSelect(v) {
+        value?.setLieu(v);
     }
 
     function onSuggectionChange(value) {

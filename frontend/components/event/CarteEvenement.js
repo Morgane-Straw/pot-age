@@ -20,17 +20,18 @@ export default function CarteEvenement(props) {
                 </FloatingLabel>
             </div>
             <div className="card-image">
-                <img src={props.event.img.regular} className="wh-card-img" alt="Illustration garçon jouant au basketball" />
+                <img src={props.event.img.regular} className="wh-card-img cursor-pointer" alt="Illustration garçon jouant au basketball" 
+                onClick={() => setShowModal(true)}/>
             </div>
 
             <div className="card-body text-primary custom">
 
-                <div className="card-name fs-4 fw-bold">
+                <div className="card-name fs-4 fw-bold cursor-pointer" onClick={() => setShowModal(true)}>
                     {props.event.titre}
                 </div>
 
-                <div className="card-description">
-                    <p>
+                <div className="card-description cursor-pointer">
+                    <p onClick={() => setShowModal(true)}>
                         {props.event.description.slice(0, 75) + '...'}</p>
                 </div>
                 <div className="d-flex flex-row align-items-center justify-content-between mx-1">

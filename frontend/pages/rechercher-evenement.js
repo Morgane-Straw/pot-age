@@ -6,37 +6,38 @@ import dummy_events from '../utils/dummy_events';
 
 import { useState, useEffect } from 'react';
 export default function RechercherEvenement(props) {
-  const [ville, setVille] = useState();
   const [activite, setActivite] = useState();
+  const [lieu, setLieu] = useState();
   const [type, setType] = useState();
   const [dates, setDates] = useState([]);
 
   const [resultats, setResultats] = useState();
+  const [barre, setBarre] = useState(<BarreRechercheEvent
+    setResultats={(e) => setResultats(e)}
+  />);
 
   return <RechercheContext.Provider
     value={{
       recherche: {
-        ville: ville,
         activite: activite,
+        lieu: lieu,
         type: type,
-        dates:dates
+        dates: dates
       },
-      setVille: setVille,
+      setLieu: setLieu,
       setActivite: setActivite,
+      setLieu: setLieu,
       setType: setType,
-      setDates:setDates
+      setDates: setDates
     }}
   >
     <div className=' mts-event'>
-      {[ville?.properties?.name, activite, type]}
       <img src='img/gr9y07ie.svg' alt='femme âgée avec une une jeune femme' className='position-absolute top-right-0 z-index-bottom w-img-bg-event'></img>
 
       <h1 className='text-primary'>
         Rechercher un évènement
       </h1>
-      <BarreRechercheEvent
-        setResultats={(e) => setResultats(e)}
-      />
+      {barre}
 
       {props.recherches_recentes ? <div>
         <h2 className='mt-5 text-primary ms-5'>
@@ -45,9 +46,12 @@ export default function RechercherEvenement(props) {
           {props.recherches_recentes.slice(0, 3).map(recherche =>
             <RechercheRecente
               recherche={recherche}
-              setVille={(e) => setVille(e)}
+              setLieu={(e) => setLieu(e)}
               setActivite={(e) => setActivite(e)}
               setType={(e) => setType(e)}
+              update={() => setBarre(<BarreRechercheEvent
+                setResultats={(e) => setResultats(e)}
+              />)}
             ></RechercheRecente>)}
         </div>
       </div>
@@ -81,19 +85,19 @@ export async function getServerSideProps() {
   return {
     props: {
       recherches_recentes: [{
-        ville: {properties:{name:"Nancy",city:"Nancy",postcode:"54000"}},
+        lieu: { properties: { name: "Nancy", city: "Nancy", postcode: "54000" } },
         activite: "Poterie",
         type: "demandes"
       }, {
-        ville:{properties: {name:"Nancy",city:"Nancy",postcode:"54000"}},
-        activite: "Poterie",
+        lieu: { properties: { name: "Nancy", city: "Nancy", postcode: "54000" } },
+        activite: "Pâte à modeler",
         type: "propositions"
       }, {
-        ville: {properties:{name:"Mirecourt",city:"Mirecourt",postcode:"88500"}},
-        activite: "Poterie",
+        lieu: { properties: { name: "Mirecourt", city: "Mirecourt", postcode: "88500" } },
+        activite: "Choucroute",
         type: "demandes"
       }, {
-        ville: {properties:{name:"Nancy",city:"Nancy",postcode:"54000"}},
+        lieu: { properties: { name: "Nancy", city: "Nancy", postcode: "54000" } },
         activite: "Peinture",
         type: "demandes"
       }],

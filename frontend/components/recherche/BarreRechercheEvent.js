@@ -1,13 +1,14 @@
 import ElementRecherche from './ElementRecherche'
-import { useState,useContext } from 'react';
+import { useContext } from 'react';
 import RechercheContext from './RechercheContext';
+import axios from 'axios';
 
 export default function BarreRechercheEvent(props) {
     const value =useContext(RechercheContext);
     let { recherche } = value.recherche;
 
     function search() {
-        alert("ok");
+        axios.post(process.env.NEXT_PUBLIC_FRONTEND_ADDRESS + 'api/recherche', value.recherche);
     }
     return <div className='position-relative'>
         {/* {[ville?Object.keys(ville):"",activite,dates?dates.map(e=>e.toLocaleDateString()):"",type]} */}

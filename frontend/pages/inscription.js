@@ -59,7 +59,8 @@ export default function Inscription() {
       prenom: prenom,
       dateDeNaissance: dateDeNaissance,
       ville: ville,
-    }} url='inscription' />);
+    }} url='inscription' 
+    href='/rechercher-evenements'/>);
     pages ? setBoutonsProgression(<div className="d-flex  flex-row-reverse justify-content-between flex-basis-50 ms-auto pe-5 pt-2">
       {pageActive < pages.length ? <BoutonProgression label="Suivant" pageActive={pageActive} onClick={(a) => setPageActive(a)}></BoutonProgression> :
         boutonConfirmer}

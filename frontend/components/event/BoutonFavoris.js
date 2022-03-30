@@ -7,7 +7,7 @@ export default function BoutonFavoris(props) {
         onMouseEnter={() => setHoverFavButton(true)} onMouseLeave={() => setHoverFavButton(false)}
         onClick={() => setFavoris(!favoris)}>
         <img src={`/img/coeur_${favoris ? "plein" : "creux"}_${hoverFavButton ? "blanc" : "bleu"}.png`} className="icon-favoris mx-1" />
-        Ajouter aux favoris
+        Enregistrer
     </button>
 
 }

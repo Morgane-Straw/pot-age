@@ -107,7 +107,8 @@ export default function ProposerEvenement() {
         horaires:horaires,
         nbParticipants:nbParticipants,
         ageParticipants:ageParticipants,
-      }} url='evenement'/> )},
+      }} url='evenement'
+      href='/mes-evenements'/> )},
     [titre, type, categorie, description, image.raw, date ? date.toString() : date, horaires, lieu, nbParticipants, ageParticipants]);
   return formPages ? <>
   {lieu?.properties?Object.keys(lieu.properties).join(" "):""}

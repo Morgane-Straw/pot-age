@@ -23,17 +23,17 @@ export default function CarteEvenement(props) {
                 <img src={props.event.img.regular} className="wh-card-img" alt="Illustration garçon jouant au basketball" />
             </div>
 
-            <div className="card-body text-primary">
+            <div className="card-body text-primary custom">
 
-                <div class="card-name">
-                    <h2>{props.event.titre}</h2>
+                <div className="card-name fs-4 fw-bold">
+                    {props.event.titre}
                 </div>
 
                 <div className="card-description">
                     <p>
-                        {props.event.description.slice(0, 105) + '...'}</p>
+                        {props.event.description.slice(0, 75) + '...'}</p>
                 </div>
-                <div className="d-flex flex-row align-items-center">
+                <div className="d-flex flex-row align-items-center justify-content-between mx-1">
                     {/* {} */}
                     <BoutonFavoris></BoutonFavoris>
                     <button className="button1 card-button1 rounded-1 bg-primary text-white text-center px-2 py-1" type="submit"

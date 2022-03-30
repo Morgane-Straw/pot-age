@@ -200,46 +200,8 @@ button,select, .unset{
 .fs-mdp-icon{
   font-size:0.55rem;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-.h-full{
-  max-height: calc(100%-5rem);
-}
-.card {
-  width: 300px; /*1*/
-  border-radius: 15px;
-  background-color: white; /*3*/
-  box-shadow: 0px 5px 20px #999; /*4*/
-  overflow: hidden;
-  margin-left: 25px;
-
-}
-
-.card-button1 {
-  width: 85px;
-  height: 25px;
-  font: size 8px;;
-  margin-top: 5px ;
-  margin-left: 175px;
-  background-color: #0F5E79;
-
-}
-
-.card-button2 {
-  width: 85px;
-  height: 20px;
-  font-size:0.75em;
-  margin-left: 15px;
-}
-=======
-/* .h-full{
-  max-height: calc(100%-20rem);
-} */
-.h-img-inscription3{
-=======
 
 .h-img-inscription3,.h-img-chantier{
->>>>>>> ef5a9f3737c62fc594ae2c652ddea01359d000bd
   height:20rem;
 }
 .h-img-inscription2{
@@ -276,9 +238,6 @@ select .w-select{
   background-color:#f2f2f2;
   margin:1rem 0;
 }
-<<<<<<< HEAD
->>>>>>> ca3aec3885671f69c74b1769359d80ff7e2d574f
-=======
 .h-1{
   height: 1rem;
 }
@@ -303,17 +262,17 @@ select .w-select{
 }
 
 .card {
-  width: 19rem; /*1*/
+  width: 16rem; /*1*/
   border-radius: 1rem;
   background-color: white; /*3*/
   box-shadow: 0px 0.25rem 1.5rem #999; /*4*/
   overflow: hidden;
-  margin-left: 25px;
+  margin-left: 1.5rem;
 
 }
 .wh-card-img{
-  width:19rem;
-  height:12rem;
+  width:16rem;
+  height:10rem;
   object-fit:cover;
 }
  
@@ -331,6 +290,9 @@ select .w-select{
   /* height: 1.25rem; */
   /* margin-left: 15px; */
 } 
+.card-body.custom{
+  padding: 0.5rem;
+}
 
 .overflow-scroll-y{
 overflow-y:scroll;
@@ -526,7 +488,7 @@ input.geoapify-autocomplete-input{
   padding: .375rem .75rem;
 }
 .mb-form{
-  margin-bottom:10rem;
+  margin-bottom:0.5rem;
 }
 .h-img-mes-event{
   height:100vh;
@@ -548,4 +510,6 @@ input.geoapify-autocomplete-input{
 .w-row-mes-events{
   width:62rem;
 }
->>>>>>> ef5a9f3737c62fc594ae2c652ddea01359d000bd
+.placeholder{
+  color:#818384;
+}

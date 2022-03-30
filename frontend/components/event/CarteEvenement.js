@@ -6,7 +6,7 @@ import ModaleEvenement from "./ModaleEvenement";
 export default function CarteEvenement(props) {
     const [showModal, setShowModal] = useState(false);
     return (
-        <div className="card position-relative">
+        <div className="card position-relative flex-grow-0 flex-shrink-0 mb-3">
             <div className="position-absolute">
                 <FloatingLabel>{props.event.ageParticipants ?
                     props.event.ageParticipants[0] ?
@@ -20,20 +20,21 @@ export default function CarteEvenement(props) {
                 </FloatingLabel>
             </div>
             <div className="card-image">
-                <img src={props.event.img.regular} className="wh-card-img" alt="Illustration garçon jouant au basketball" />
+                <img src={props.event.img.regular} className="wh-card-img cursor-pointer" alt="Illustration garçon jouant au basketball" 
+                onClick={() => setShowModal(true)}/>
             </div>
 
-            <div className="card-body text-primary">
+            <div className="card-body text-primary custom">
 
-                <div class="card-name">
-                    <h2>{props.event.titre}</h2>
+                <div className="card-name fs-4 fw-bold cursor-pointer" onClick={() => setShowModal(true)}>
+                    {props.event.titre.length>21?props.event.titre.slice(0,19)+'...':props.event.titre}
                 </div>
 
-                <div className="card-description">
-                    <p>
-                        {props.event.description.slice(0, 105) + '...'}</p>
+                <div className="card-description cursor-pointer">
+                    <p onClick={() => setShowModal(true)}>
+                        {props.event.description.slice(0, 75) + '...'}</p>
                 </div>
-                <div className="d-flex flex-row align-items-center">
+                <div className="d-flex flex-row align-items-center justify-content-between mx-1">
                     {/* {} */}
                     <BoutonFavoris></BoutonFavoris>
                     <button className="button1 card-button1 rounded-1 bg-primary text-white text-center px-2 py-1" type="submit"

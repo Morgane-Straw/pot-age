@@ -139,6 +139,9 @@ button,select, .unset{
  .border-light-gray{
    border-color : #ececec;
  }
+ .flex-basis-30{
+  flex-basis: 30%;
+}
  .flex-basis-50{
   flex-basis: 50%;
 }
@@ -259,17 +262,17 @@ select .w-select{
 }
 
 .card {
-  width: 19rem; /*1*/
+  width: 16rem; /*1*/
   border-radius: 1rem;
   background-color: white; /*3*/
   box-shadow: 0px 0.25rem 1.5rem #999; /*4*/
   overflow: hidden;
-  margin-left: 25px;
+  margin-left: 1.5rem;
 
 }
 .wh-card-img{
-  width:19rem;
-  height:12rem;
+  width:16rem;
+  height:10rem;
   object-fit:cover;
 }
  
@@ -287,6 +290,9 @@ select .w-select{
   /* height: 1.25rem; */
   /* margin-left: 15px; */
 } 
+.card-body.custom{
+  padding: 0.5rem;
+}
 
 .overflow-scroll-y{
 overflow-y:scroll;
@@ -334,7 +340,7 @@ overflow-y:scroll;
 .rounded-top-2{
   border-radius: 2rem 2rem 0 0;
 }
-.shadow-card,{
+.shadow-card{
   box-shadow: 0px 5px 20px #999; /*4*/
 
 }
@@ -482,7 +488,7 @@ input.geoapify-autocomplete-input{
   padding: .375rem .75rem;
 }
 .mb-form{
-  margin-bottom:10rem;
+  margin-bottom:0.5rem;
 }
 .h-img-mes-event{
   height:100vh;
@@ -491,4 +497,19 @@ input.geoapify-autocomplete-input{
   display:block;
   font-size:5rem;
   height:5rem;
+}
+.overflow-x-auto{
+  overflow-x:auto;
+}
+.overflow-x-hidden{
+  overflow-x:hidden;
+}
+.h-row-mes-events{
+  height:22rem;
+}
+.w-row-mes-events{
+  width:62rem;
+}
+.placeholder{
+  color:#818384;
 }

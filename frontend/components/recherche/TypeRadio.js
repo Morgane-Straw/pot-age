@@ -1,11 +1,20 @@
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useContext } from "react"
+import RechercheContext from "./RechercheContext";
 
 export default function TypeRadio(props) {
-    const [checked, setChecked] = useState(props.defaultValue ? props.defaultValue : 'propositions');
+    const value = useContext(RechercheContext);
+    const [checked, setChecked] = useState(value.recherche.type? value.recherche.type : '');
+
     const [show, setShow] = useState(false);
-    useEffect(() => props.setValue(checked), [checked]);
+    useEffect(() => value.setType(checked), [checked]);
     return <div className="d-flex flex-column">
-        <div onClick={() => setShow(!show)}>{checked == "propositions" ? "Propositions" : "Demandes"}</div>
+        <div onClick={() => setShow(!show)}>
+            {checked ?
+                checked == "propositions" ?
+                    "Propositions" : "Demandes"
+                : <span className="placeholder">
+                    {props.placeholder}</span>
+            }</div>
         {/* <div className={showHideClassName} onClick={() => setShow(!show)}> */}
         {show ? <div className="bg-light-gray ps-2 pe-5 pb-2" onClick={() => setShow(!show)}>
 

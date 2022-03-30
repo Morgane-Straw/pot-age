@@ -1,8 +1,11 @@
-import { useState, useEffect, useRef } from "react"
+import { useState, useContext } from "react"
 import Calendar from 'react-calendar';
+import RechercheContext from './RechercheContext';
+
 
 export default function DatesPicker(props) {
-    const [dates, setDates] = useState(props.defaultValue ? props.defaultValue : []);
+    const value =useContext(RechercheContext);
+
     const [show, setShow] = useState(false);
     function dateAlreadyClicked(ds, e) {
         e = new Date(e)
@@ -14,40 +17,41 @@ export default function DatesPicker(props) {
     }
     function onChange(e) {
         e = new Date(e)
-        let temp = dates.filter(
+        let temp = value.recherche.dates.filter(
             (value, index, arr) => {
                 // alert([value.getDate(), e.getDate(), value.getMonth(), e.getMonth(), value.getFullYear(), e.getFullYear()]);
                 return !(value.getDate() == e.getDate() && (value.getMonth() == e.getMonth() && value.getFullYear() == e.getFullYear()));
             }
         );
         // alert(temp);
-        if (temp.length < dates.length) {
-            setDates(temp)
+        if (temp.length < value.recherche.dates.length) {
+            value.setDates(temp)
             document.querySelector(`abbr[aria-label="${e.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}"]`).classList.remove("active-tile");
         }
         else {
-            setDates(dates.concat([new Date(e)]));
+            value.setDates(value.recherche.dates.concat([new Date(e)]));
             document.querySelector(`abbr[aria-label="${e.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}"]`).classList.add("active-tile");
         }
 
     }
 
-    useEffect(() => {
-        props.setValue(dates);
-    }, [dates]);
+
     const tileClassName = ({ date }) => {
         // const classNames = [classes.dayTile]
         // give active days a special class
-        if (dateAlreadyClicked(dates, date)) return "react-calendar__tile react-calendar__tile--active "
+        if (dateAlreadyClicked(value.recherche.dates, date)) return "react-calendar__tile react-calendar__tile--active "
         return "react-calendar__tile react-calendar__month-view__days__day"
     }
     return <div className="d-flex flex-column ">
         <div
             className="d-block w-input-date h-input-date cursor-pointer "
             onClick={() => setShow(!show)}>
-            {dates.map(e => e.toLocaleDateString(undefined, { month: 'short', day: "numeric" })).join(',').length < 15 ?
-                dates.map(e => e.toLocaleDateString(undefined, { month: 'short', day: "numeric" })).join(',')
-                : (dates.map(e => e.toLocaleDateString(undefined, { month: 'short', day: "numeric" })).join(', ')).slice(0, 15) + '...'}</div>
+            {value.recherche.dates.length > 0 ?
+                value.recherche.dates.map(e => e.toLocaleDateString(undefined, { month: 'short', day: "numeric" })).join(',').length < 15 ?
+                    value.recherche.dates.map(e => e.toLocaleDateString(undefined, { month: 'short', day: "numeric" })).join(',')
+                    : (value.recherche.dates.map(e => e.toLocaleDateString(undefined, { month: 'short', day: "numeric" })).join(', ')).slice(0, 15) + '...'
+                :
+                <span className="placeholder">{props.placeholder}</span>}</div>
         {/* <div className={showHideClassName} onClick={() => setShow(!show)}> */}
         {show ? <div
             className="d-flex flex-column align-items-stretch bg-light-gray p-1"

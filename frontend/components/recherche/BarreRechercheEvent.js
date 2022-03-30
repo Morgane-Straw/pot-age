@@ -1,13 +1,14 @@
 import ElementRecherche from './ElementRecherche'
-import { useState } from 'react';
+import { useContext } from 'react';
+import RechercheContext from './RechercheContext';
+import axios from 'axios';
 
 export default function BarreRechercheEvent(props) {
-    const [ville, setVille] = useState();
-    const [activite, setActivite] = useState();
-    const [dates, setDates] = useState([]);
-    const [type, setType] = useState();
+    const value =useContext(RechercheContext);
+    let { recherche } = value.recherche;
+
     function search() {
-        alert("ok");
+        axios.post(process.env.NEXT_PUBLIC_FRONTEND_ADDRESS + 'api/recherche', value.recherche);
     }
     return <div className='position-relative'>
         {/* {[ville?Object.keys(ville):"",activite,dates?dates.map(e=>e.toLocaleDateString()):"",type]} */}
@@ -18,23 +19,27 @@ export default function BarreRechercheEvent(props) {
             img='img/Icon metro-home.svg'
             border='border-end'
             type ="address"
-            setValue={setVille} defaultValue={ville} />
+            setValue={value.setVille} defaultValue={recherche?.ville} 
+            placeholder="Où aller ?"/>
         <ElementRecherche
             label="Activité" id="activite"
             img="img/Icon awesome-running.svg"
             border='border-end'
-            setValue={setActivite} defaultValue={activite} />
+            setValue={value.setActivite} defaultValue={recherche?.activite} 
+            placeholder="Que faire ?"/>
         <ElementRecherche
             label="Dates" id="dates"
             img="img/Icon awesome-calendar-alt.svg"
             border='border-end'
             type="date"
-            setValue={(e)=>setDates(e)} defaultValue={dates} />
+            setValue={value.setDates} defaultValue={recherche?.dates} 
+            placeholder="Quand ?"/>
         <ElementRecherche
             label="Type de recherche" id="type"
             img="img/Icon awesome-hand-holding.svg"
             type="radio"
-            setValue={setType} defaultValue={type} />
+            setValue={value.setType} defaultValue={recherche?.type} 
+            placeholder="Propositions ou demandes ?"/>
 
         <div className='bg-primary text-white fs-4 d-flex flex-row justify-content-center align-items-center p-2 flex-grow-1 rounded-right-1 cursor-pointer'
             onClick={() => search()}

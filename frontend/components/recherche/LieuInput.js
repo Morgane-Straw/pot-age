@@ -1,22 +1,33 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { GeoapifyGeocoderAutocomplete, GeoapifyContext } from '@geoapify/react-geocoder-autocomplete'
 import '@geoapify/geocoder-autocomplete/styles/minimal.css'
 
+import RechercheContext from './RechercheContext';
+
 
 export default function LieuInput(props) {
-    const [lieu, setLieu] = useState(props.defaultValue);
-    useEffect(()=>props.setValue(lieu),[lieu]);
-    // const [autocomplete, setAutocomplete] = useState();
+    const value = useContext(RechercheContext);
+    const [geocoder, setGeocoder] = useState();
+    useEffect(() => setGeocoder(<GeoapifyGeocoderAutocomplete placeholder={props.placeholder ? props.placeholder : "Entrez une adresse"}
+        value={value.recherche.lieu?.properties?.name}
+        type={props.type}
+        lang="fr"
+        // position={position}
+        limit={5}
+        // filterByCountryCode={filterByCountryCode}
+        // filterByCircle={filterByCircle}
+        // filterByRect={filterByRect}
+        // biasByCountryCode={biasByCountryCode}
+        // biasByCircle={biasByCircle}
+        // biasByRect={biasByRect}
+        // biasByProximity={biasByProximity}
+        placeSelect={onPlaceSelect}
+        suggestionsChange={onSuggectionChange}
+    />), [value.recherche.lieu])
 
 
-    // useEffect(props.setValue(lieu), [lieu]);
-    // return (
-    //     <input id={props.id} className="unset" onChange={(e) => setLieu(e.target.value)} defaultValue={props.defaultValue} />
-
-
-    // )
-    function onPlaceSelect(value) {
-        setLieu(value);
+    function onPlaceSelect(v) {
+        value?.setLieu(v);
     }
 
     function onSuggectionChange(value) {
@@ -53,22 +64,7 @@ export default function LieuInput(props) {
             suggestionsChange={onSuggectionChange}
         /> */}
 
-        <GeoapifyGeocoderAutocomplete placeholder={props.placeholder?props.placeholder:"Entrez une adresse"}
-            value={props.defaultValue}
-            type={props.type}
-            lang="fr"
-            // position={position}
-            limit={5}
-            // filterByCountryCode={filterByCountryCode}
-            // filterByCircle={filterByCircle}
-            // filterByRect={filterByRect}
-            // biasByCountryCode={biasByCountryCode}
-            // biasByCircle={biasByCircle}
-            // biasByRect={biasByRect}
-            // biasByProximity={biasByProximity}
-            placeSelect={onPlaceSelect}
-            suggestionsChange={onSuggectionChange}
-        />
+        {geocoder}
 
         {/* <GeoapifyGeocoderAutocomplete
             placeSelect={onPlaceSelect}

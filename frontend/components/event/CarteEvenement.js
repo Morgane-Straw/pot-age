@@ -27,7 +27,7 @@ export default function CarteEvenement(props) {
             <div className="card-body text-primary custom">
 
                 <div className="card-name fs-4 fw-bold cursor-pointer" onClick={() => setShowModal(true)}>
-                    {props.event.titre}
+                    {props.event.titre.length>21?props.event.titre.slice(0,19)+'...':props.event.titre}
                 </div>
 
                 <div className="card-description cursor-pointer">

@@ -14,6 +14,6 @@ export default function RechercheRecente(props) {
 
         <div className="fw-bold fs-5">{props.recherche.activite}</div>
         <div>{props.recherche.type == "demandes" ? "Demandes" : "Propositions"}</div>
-        <div>{props.recherche?.ville?.properties?.name}</div>
+        <div>{props.recherche?.lieu?.properties?.name}</div>
     </div>
 }

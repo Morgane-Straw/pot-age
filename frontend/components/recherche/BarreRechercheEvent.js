@@ -2,6 +2,7 @@ import ElementRecherche from './ElementRecherche'
 import { useContext } from 'react';
 import RechercheContext from './RechercheContext';
 import axios from 'axios';
+import dummy_events from '../../utils/dummy_events';
 
 export default function BarreRechercheEvent(props) {
     const value =useContext(RechercheContext);
@@ -9,6 +10,7 @@ export default function BarreRechercheEvent(props) {
 
     function search() {
         axios.post(process.env.NEXT_PUBLIC_FRONTEND_ADDRESS + 'api/recherche', value.recherche);
+        props.setResultats(dummy_events);
     }
     return <div className='position-relative'>
         {/* {[ville?Object.keys(ville):"",activite,dates?dates.map(e=>e.toLocaleDateString()):"",type]} */}
@@ -41,7 +43,7 @@ export default function BarreRechercheEvent(props) {
             setValue={value.setType} defaultValue={recherche?.type} 
             placeholder="Propositions ou demandes ?"/>
 
-        <div className='bg-primary text-white fs-4 d-flex flex-row justify-content-center align-items-center p-2 flex-grow-1 rounded-right-1 cursor-pointer'
+        <div className='bg-primary text-white fs-4 d-flex flex-row justify-content-center align-items-center py-2 px-2  rounded-right-1 cursor-pointer'
             onClick={() => search()}
         >
             <i className='fas fa-search p-2'></i>

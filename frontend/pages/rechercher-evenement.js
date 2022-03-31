@@ -10,6 +10,7 @@ export default function RechercherEvenement(props) {
   const [lieu, setLieu] = useState();
   const [type, setType] = useState();
   const [dates, setDates] = useState([]);
+  const [distance,setDistance]=useState(0);
 
   const [resultats, setResultats] = useState();
   const [barre, setBarre] = useState(<BarreRechercheEvent
@@ -22,13 +23,15 @@ export default function RechercherEvenement(props) {
         activite: activite,
         lieu: lieu,
         type: type,
-        dates: dates
+        dates: dates,
+        distance:distance
       },
       setLieu: setLieu,
       setActivite: setActivite,
       setLieu: setLieu,
       setType: setType,
-      setDates: setDates
+      setDates: setDates,
+      setDistance:setDistance
     }}
   >
     <div className=' mts-event'>
@@ -59,7 +62,7 @@ export default function RechercherEvenement(props) {
       }
       {resultats ? <div>
         <h2 className='mt-5 text-primary ms-5'>Resultats</h2>
-        <div className='d-flex flex-row flex-wrap mt-3'>
+        <div className='d-flex flex-row flex-wrap mt-3 me-5 justify-content-center'>
           {resultats.map(event =>
             <CarteEvenement
               event={event}

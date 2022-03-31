@@ -42,7 +42,7 @@ export default function DatesPicker(props) {
         if (dateAlreadyClicked(value.recherche.dates, date)) return "react-calendar__tile react-calendar__tile--active "
         return "react-calendar__tile react-calendar__month-view__days__day"
     }
-    return <div className="d-flex flex-column ">
+    return <div className="d-flex flex-column z-index-top">
         <div
             className="d-block w-input-date h-input-date cursor-pointer "
             onClick={() => setShow(!show)}>

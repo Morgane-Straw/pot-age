@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 export default function DefaultNavBar(path) {
   const user = useUser();
   const router = useRouter();
-  return <nav className=" bg-white justify-content-between position-relative z-index-top  d-flex flex-row position-fixed w-100 ">
+  return <nav className=" bg-white justify-content-between position-relative z-index-top  d-flex flex-row position-fixed w-100 z-index-top-top">
     <span className="d-flex flex-row align-items-center">
       <a className="navbar-brand nav-item px-3 cursor-pointer" href="/">
         <img src="/img/LogoBleu.svg" alt="Pot'Age" className="w-logo" />

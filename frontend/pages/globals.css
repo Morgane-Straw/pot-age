@@ -513,3 +513,15 @@ input.geoapify-autocomplete-input{
 .placeholder{
   color:#818384;
 }
+.z-index-top-top{
+z-index:50;
+}
+.w-elt-lieu{
+  width:22%;
+}
+.distance-picker{
+  position: absolute;
+  top: 3.8rem;
+  left: 2.8rem;
+  width: 17rem;
+}

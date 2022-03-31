@@ -10,7 +10,7 @@ export default function ElementRecherche(props) {
     const value = useContext(RechercheContext);
 
     return (
-        <div className={"my-2 px-2 flex-grow-1 border-gray w-elt-barre " + (props.border)}>
+        <div className={"my-2 px-2 flex-grow-1 border-gray  "+(props.type=="address"?"w-elt-lieu ":"w-elt-barre ") + (props.border)}>
             <div className="ms-1 text-primary fw-bold">{props.label}</div>
             <div className="d-flex flex-row align-items-start mt-1">
                 <img src={props.img} className='recherche-icon ms-1 me-3 mt-1 ' />

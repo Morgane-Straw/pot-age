@@ -17,7 +17,7 @@ export default function TypeRadio(props) {
         {show ? <div className="bg-light-gray ps-2 pe-5 pb-2" onClick={() => setShow(!show)}>
 
             <div className="d-flex flex-column mt-2">
-                <div onClick={() => { setType("propositions"); setShow(false) }}>
+                <div onClick={() => { value.setType("propositions"); setShow(false) }}>
                     <input
                         className="m-2 " type="radio"
                         name="propositions" id="propositions"
@@ -25,7 +25,7 @@ export default function TypeRadio(props) {
                     />
                     <label htmlFor="propositions">Proposition</label></div>
 
-                <div onClick={() => { setChecked("demandes"); setShow(false) }}>
+                <div onClick={() => { value.setType("demandes"); setShow(false) }}>
                     <input className="m-2 " type="radio"
                         name="demandes" id="demandes"
                         value="demandes" checked={value.recherche.type == "demandes"}
